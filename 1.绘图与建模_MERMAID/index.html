@@ -1,0 +1,374 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>MERMAID</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">我的笔记库</a></li><li class="chapter-item expanded affix "><li class="part-title">绘图与建模</li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.</strong> UML</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../0.绘图与建模_UML/UML.html"><strong aria-hidden="true">1.1.</strong> UML</a></li></ol></li><li class="chapter-item expanded "><a href="../1.绘图与建模_MERMAID/index.html" class="active"><strong aria-hidden="true">2.</strong> MERMAID</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../1.绘图与建模_MERMAID/时序图.html"><strong aria-hidden="true">2.1.</strong> 时序图</a></li><li class="chapter-item expanded "><a href="../1.绘图与建模_MERMAID/流程图.html"><strong aria-hidden="true">2.2.</strong> 流程图</a></li><li class="chapter-item expanded "><a href="../1.绘图与建模_MERMAID/类图.html"><strong aria-hidden="true">2.3.</strong> 类图</a></li><li class="chapter-item expanded "><a href="../1.绘图与建模_MERMAID/语法总览.html"><strong aria-hidden="true">2.4.</strong> 语法总览</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.</strong> Flowchart</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../2.绘图与建模_Flowchart/flowchart_fun.html"><strong aria-hidden="true">3.1.</strong> flowchart_fun</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> PlantUml</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../3.绘图与建模_PlantUml/plantUML语法.html"><strong aria-hidden="true">4.1.</strong> plantUML语法</a></li></ol></li><li class="chapter-item expanded "><li class="part-title"></li><li class="chapter-item expanded "><a href="../4.模板引擎/index.html"><strong aria-hidden="true">5.</strong> 模板引擎</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../4.模板引擎/mustache/index.html"><strong aria-hidden="true">5.1.</strong> mustache</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.</strong> 常用软件</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../5.常用软件/Multipass.html"><strong aria-hidden="true">6.1.</strong> Multipass</a></li><li class="chapter-item expanded "><a href="../5.常用软件/Wallabag.html"><strong aria-hidden="true">6.2.</strong> Wallabag</a></li><li class="chapter-item expanded "><a href="../5.常用软件/v2rayN代理.html"><strong aria-hidden="true">6.3.</strong> v2rayN代理</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">7.</strong> 生活事宜</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../6.生活事宜/个人清算汇缴.html"><strong aria-hidden="true">7.1.</strong> 个人清算汇缴</a></li></ol></li><li class="chapter-item expanded "><a href="../7.思考/index.html"><strong aria-hidden="true">8.</strong> 思考</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../7.思考/学习总结.html"><strong aria-hidden="true">8.1.</strong> 学习总结</a></li><li class="chapter-item expanded "><a href="../7.思考/杂项.html"><strong aria-hidden="true">8.2.</strong> 杂项</a></li><li class="chapter-item expanded "><a href="../7.思考/编程技巧.html"><strong aria-hidden="true">8.3.</strong> 编程技巧</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.</strong> 学习</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../8.学习/概率论与数理统计.html"><strong aria-hidden="true">9.1.</strong> 概率论与数理统计</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">10.</strong> 数据格式</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../9.数据格式/XML.html"><strong aria-hidden="true">10.1.</strong> XML</a></li><li class="chapter-item expanded "><a href="../9.数据格式/yaml.html"><strong aria-hidden="true">10.2.</strong> yaml</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">11.</strong> Linux</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../10.Linux/CFSBandwidthControl.html"><strong aria-hidden="true">11.1.</strong> CFSBandwidthControl</a></li><li class="chapter-item expanded "><a href="../10.Linux/LinuxFor.html"><strong aria-hidden="true">11.2.</strong> LinuxFor</a></li><li class="chapter-item expanded "><a href="../10.Linux/LinuxWOL设置.html"><strong aria-hidden="true">11.3.</strong> LinuxWOL设置</a></li><li class="chapter-item expanded "><a href="../10.Linux/Linux条件测试.html"><strong aria-hidden="true">11.4.</strong> Linux条件测试</a></li><li class="chapter-item expanded "><a href="../10.Linux/Seed.html"><strong aria-hidden="true">11.5.</strong> Seed</a></li><li class="chapter-item expanded "><a href="../10.Linux/VIM.html"><strong aria-hidden="true">11.6.</strong> VIM</a></li><li class="chapter-item expanded "><a href="../10.Linux/caseIn.html"><strong aria-hidden="true">11.7.</strong> caseIn</a></li><li class="chapter-item expanded "><a href="../10.Linux/cgroup.html"><strong aria-hidden="true">11.8.</strong> cgroup</a></li><li class="chapter-item expanded "><a href="../10.Linux/curl.html"><strong aria-hidden="true">11.9.</strong> curl</a></li><li class="chapter-item expanded "><a href="../10.Linux/dd.html"><strong aria-hidden="true">11.10.</strong> dd</a></li><li class="chapter-item expanded "><a href="../10.Linux/diffPatch.html"><strong aria-hidden="true">11.11.</strong> diffPatch</a></li><li class="chapter-item expanded "><a href="../10.Linux/find.html"><strong aria-hidden="true">11.12.</strong> find</a></li><li class="chapter-item expanded "><a href="../10.Linux/iptables.html"><strong aria-hidden="true">11.13.</strong> iptables</a></li><li class="chapter-item expanded "><a href="../10.Linux/jq.html"><strong aria-hidden="true">11.14.</strong> jq</a></li><li class="chapter-item expanded "><a href="../10.Linux/lsof.html"><strong aria-hidden="true">11.15.</strong> lsof</a></li><li class="chapter-item expanded "><a href="../10.Linux/ps.html"><strong aria-hidden="true">11.16.</strong> ps</a></li><li class="chapter-item expanded "><a href="../10.Linux/read.html"><strong aria-hidden="true">11.17.</strong> read</a></li><li class="chapter-item expanded "><a href="../10.Linux/scp.html"><strong aria-hidden="true">11.18.</strong> scp</a></li><li class="chapter-item expanded "><a href="../10.Linux/select.html"><strong aria-hidden="true">11.19.</strong> select</a></li><li class="chapter-item expanded "><a href="../10.Linux/service脚本.html"><strong aria-hidden="true">11.20.</strong> service脚本</a></li><li class="chapter-item expanded "><a href="../10.Linux/set.html"><strong aria-hidden="true">11.21.</strong> set</a></li><li class="chapter-item expanded "><a href="../10.Linux/shell字符串.html"><strong aria-hidden="true">11.22.</strong> shell字符串</a></li><li class="chapter-item expanded "><a href="../10.Linux/shell脚本参数.html"><strong aria-hidden="true">11.23.</strong> shell脚本参数</a></li><li class="chapter-item expanded "><a href="../10.Linux/stat.html"><strong aria-hidden="true">11.24.</strong> stat</a></li><li class="chapter-item expanded "><a href="../10.Linux/tar.html"><strong aria-hidden="true">11.25.</strong> tar</a></li><li class="chapter-item expanded "><a href="../10.Linux/top命令.html"><strong aria-hidden="true">11.26.</strong> top命令</a></li><li class="chapter-item expanded "><a href="../10.Linux/uidGidSetUidSetGid.html"><strong aria-hidden="true">11.27.</strong> uidGidSetUidSetGid</a></li><li class="chapter-item expanded "><a href="../10.Linux/wsl关闭提示音.html"><strong aria-hidden="true">11.28.</strong> wsl关闭提示音</a></li><li class="chapter-item expanded "><a href="../10.Linux/yum本地包依赖.html"><strong aria-hidden="true">11.29.</strong> yum本地包依赖</a></li><li class="chapter-item expanded "><a href="../10.Linux/大端与小端.html"><strong aria-hidden="true">11.30.</strong> 大端与小端</a></li><li class="chapter-item expanded "><a href="../10.Linux/确定Linux发行版本.html"><strong aria-hidden="true">11.31.</strong> 确定Linux发行版本</a></li><li class="chapter-item expanded "><a href="../10.Linux/零拷贝.html"><strong aria-hidden="true">11.32.</strong> 零拷贝</a></li><li class="chapter-item expanded "><a href="../10.Linux/默认值语法糖.html"><strong aria-hidden="true">11.33.</strong> 默认值语法糖</a></li></ol></li><li class="chapter-item expanded "><a href="../11.algorithm/index.html"><strong aria-hidden="true">12.</strong> algorithm</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../11.algorithm/Base64编码.html"><strong aria-hidden="true">12.1.</strong> Base64编码</a></li><li class="chapter-item expanded "><a href="../11.algorithm/Huffman编码.html"><strong aria-hidden="true">12.2.</strong> Huffman编码</a></li><li class="chapter-item expanded "><a href="../11.algorithm/base64.html"><strong aria-hidden="true">12.3.</strong> base64</a></li><li class="chapter-item expanded "><a href="../11.algorithm/fnv-hash算法.html"><strong aria-hidden="true">12.4.</strong> fnv-hash算法</a></li><li class="chapter-item expanded "><a href="../11.algorithm/二叉搜索平衡树.html"><strong aria-hidden="true">12.5.</strong> 二叉搜索平衡树</a></li><li class="chapter-item expanded "><a href="../11.algorithm/位运算.html"><strong aria-hidden="true">12.6.</strong> 位运算</a></li><li class="chapter-item expanded "><a href="../11.algorithm/动态规划.html"><strong aria-hidden="true">12.7.</strong> 动态规划</a></li><li class="chapter-item expanded "><a href="../11.algorithm/动态规划-新.html"><strong aria-hidden="true">12.8.</strong> 动态规划-新</a></li><li class="chapter-item expanded "><a href="../11.algorithm/字符编码.html"><strong aria-hidden="true">12.9.</strong> 字符编码</a></li><li class="chapter-item expanded "><a href="../11.algorithm/布隆过滤器.html"><strong aria-hidden="true">12.10.</strong> 布隆过滤器</a></li><li class="chapter-item expanded "><a href="../11.algorithm/浮点数.html"><strong aria-hidden="true">12.11.</strong> 浮点数</a></li><li class="chapter-item expanded "><a href="../11.algorithm/红黑树.html"><strong aria-hidden="true">12.12.</strong> 红黑树</a></li><li class="chapter-item expanded "><a href="../11.algorithm/贪心算法.html"><strong aria-hidden="true">12.13.</strong> 贪心算法</a></li><li class="chapter-item expanded "><a href="../11.algorithm/逆波兰表达式.html"><strong aria-hidden="true">12.14.</strong> 逆波兰表达式</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="简介"><a class="header" href="#简介">简介</a></h1>
+<h2 id="介绍"><a class="header" href="#介绍">介绍</a></h2>
+<p>Mermaid 是一个用于画流程图、状态图、时序图、甘特图的库，使用 JS 进行本地渲染，广泛集成于许多 Markdown 编辑器中。</p>
+<p>官网：https://mermaidjs.github.io/</p>
+<p>Github 项目地址：https://github.com/knsv/mermaid</p>
+<h2 id="mermaid-is-a-diagramming-tool-for-everyone"><a class="header" href="#mermaid-is-a-diagramming-tool-for-everyone">Mermaid is a Diagramming tool for everyone.</a></h2>
+<ul>
+<li>非编程人员可以 使用在线编辑器， <a href="https://github.com/mermaid-js/mermaid-live-editor">Mermaid Live Editor</a>，访问 教程页 <a href="https://mermaid-js.github.io/mermaid/#/./Tutorials">Tutorials Page</a> </li>
+<li>很多 应用也 集成了 <em>mermaid</em>  ，看<a href="https://mermaid-js.github.io/mermaid/#/./integrations">Integrations and Usages for Mermaid</a>.</li>
+</ul>
+<p>🌐 <a href="https://unpkg.com/mermaid/">CDN</a> | 📖 <a href="https://mermaidjs.github.io/">Documentation</a> | 🙌 <a href="https://github.com/mermaid-js/mermaid/blob/develop/docs/development.md">Contribution</a> | 📜 <a href="https://mermaid-js.github.io/mermaid/#/./CHANGELOG">Version Log</a></p>
+<h2 id="可以渲染的图像"><a class="header" href="#可以渲染的图像">可以渲染的图像</a></h2>
+<h3 id="简单流程图"><a class="header" href="#简单流程图">简单流程图</a></h3>
+<pre><code>graph TD;
+    A--&gt;B;
+    A--&gt;C;
+    B--&gt;D;
+    C--&gt;D;
+</code></pre>
+<h3 id="时序图"><a class="header" href="#时序图">时序图</a></h3>
+<pre><code>sequenceDiagram
+    participant Alice
+    participant Bob
+    Alice-&gt;&gt;John: Hello John, how are you?
+    loop Healthcheck
+        John-&gt;&gt;John: Fight against hypochondria
+    end
+    Note right of John: Rational thoughts &lt;br/&gt;prevail!
+    John--&gt;&gt;Alice: Great!
+    John-&gt;&gt;Bob: How about you?
+    Bob--&gt;&gt;John: Jolly good!
+</code></pre>
+<h3 id="甘特图"><a class="header" href="#甘特图">甘特图</a></h3>
+<pre><code>gantt
+dateFormat  YYYY-MM-DD
+title Adding GANTT diagram to mermaid
+excludes weekdays 2014-01-10
+
+section A section
+Completed task            :done,    des1, 2014-01-06,2014-01-08
+Active task               :active,  des2, 2014-01-09, 3d
+Future task               :         des3, after des2, 5d
+Future task2               :         des4, after des3, 5d
+</code></pre>
+<h3 id="类图"><a class="header" href="#类图">类图</a></h3>
+<pre><code>classDiagram
+Class01 &lt;|-- AveryLongClass : Cool
+Class03 *-- Class04
+Class05 o-- Class06
+Class07 .. Class08
+Class09 --&gt; C2 : Where am i?
+Class09 --* C3
+Class09 --|&gt; Class07
+Class07 : equals()
+Class07 : Object[] elementData
+Class01 : size()
+Class01 : int chimp
+Class01 : int gorilla
+Class08 &lt;--&gt; C2: Cool label
+</code></pre>
+<h3 id="git提交图"><a class="header" href="#git提交图">Git提交图</a></h3>
+<pre><code>gitGraph:
+options
+{
+    &quot;nodeSpacing&quot;: 150,
+    &quot;nodeRadius&quot;: 10
+}
+end
+commit
+branch newbranch
+checkout newbranch
+commit
+commit
+checkout master
+commit
+commit
+merge newbranch
+</code></pre>
+<h3 id="er图"><a class="header" href="#er图">ER图</a></h3>
+<pre><code>erDiagram
+    CUSTOMER ||--o{ ORDER : places
+    ORDER ||--|{ LINE-ITEM : contains
+    CUSTOMER }|..|{ DELIVERY-ADDRESS : uses
+</code></pre>
+<h3 id="用户日志图"><a class="header" href="#用户日志图">用户日志图</a></h3>
+<pre><code>journey
+    title My working day
+    section Go to work
+      Make tea: 5: Me
+      Go upstairs: 3: Me
+      Do work: 1: Me, Cat
+    section Go home
+      Go downstairs: 5: Me
+      Sit down: 5: Me
+</code></pre>
+<h2 id="安装"><a class="header" href="#安装">安装</a></h2>
+<p><code>https://unpkg.com/mermaid@&lt;version&gt;/dist/</code></p>
+<p>Latest Version: https://unpkg.com/browse/mermaid@8.8.0/</p>
+<h2 id="部署mermaid"><a class="header" href="#部署mermaid">部署Mermaid</a></h2>
+<pre><code>&lt;script src=&quot;https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;mermaid.initialize({startOnLoad:true});&lt;/script&gt;
+</code></pre>
+<h2 id="兄弟项目"><a class="header" href="#兄弟项目">兄弟项目</a></h2>
+<ul>
+<li><a href="https://github.com/mermaid-js/mermaid-live-editor">Mermaid Live Editor</a></li>
+<li><a href="https://github.com/mermaid-js/mermaid-cli">Mermaid CLI</a></li>
+<li><a href="https://github.com/mermaidjs/mermaid-webpack-demo">Mermaid Webpack Demo</a></li>
+<li><a href="https://github.com/mermaidjs/mermaid-parcel-demo">Mermaid Parcel Demo</a></li>
+</ul>
+<p><strong>请求协助</strong></p>
+<p>欢迎来共享源代码，我们以后的方向是</p>
+<ul>
+<li>Adding more types of diagrams like mindmaps, ert diagrams, etc. 更多的类型的图，例如 mindmap</li>
+<li>Improving existing diagrams 改进现有的图</li>
+</ul>
+<h2 id="代码贡献步骤"><a class="header" href="#代码贡献步骤"><strong>代码贡献步骤</strong></a></h2>
+<ul>
+<li>yarn install</li>
+<li>yarn build:watch</li>
+<li>yarn lint</li>
+<li>yarn test</li>
+<li>npm publish</li>
+</ul>
+<h1 id="使用步骤"><a class="header" href="#使用步骤">使用步骤</a></h1>
+<p>有四种方式 使用<em>mermaid</em></p>
+<ol>
+<li>Using the mermaid <a href="https://mermaid-js.github.io/mermaid-live-editor/">live editor</a>. For some popular video tutorials on the live editor go to <a href="https://mermaid-js.github.io/mermaid/#/./n00b-overview">Overview</a>.</li>
+<li>Using one of the many <a href="https://mermaid-js.github.io/mermaid/#/../overview/integrations">mermaid plugins</a>. </li>
+<li>Hosting mermaid on a webpage, with an absolute link.</li>
+<li>Downloading mermaid and hosting it on your Web Page.</li>
+</ol>
+<h2 id="在线编辑器"><a class="header" href="#在线编辑器">在线编辑器</a></h2>
+<h2 id="mermaid插件"><a class="header" href="#mermaid插件">mermaid插件</a></h2>
+<p><strong>This is covered in greater detail in the <a href="https://mermaid-js.github.io/mermaid/#/usage">Usage section</a></strong></p>
+<h2 id="浏览器使用"><a class="header" href="#浏览器使用">浏览器使用</a></h2>
+<p>a. A reference for fetching the online mermaid renderer, which is written in Javascript.</p>
+<p>b. The mermaid code for the diagram we want to create.</p>
+<p>c. The <code>mermaid.initialize()</code> call to start the rendering process.</p>
+<pre><code class="language-html">&lt;body&gt;
+  &lt;script src=&quot;https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+
+&lt;body&gt;
+  Here is a mermaid diagram:
+  &lt;div class=&quot;mermaid&quot;&gt;
+    graph TD
+    A[Client] --&gt; B[Load Balancer]
+    B --&gt; C[Server01]
+    B --&gt; D[Server02]
+  &lt;/div&gt;
+&lt;/body&gt;
+
+&lt;body&gt;
+  &lt;script&gt;mermaid.initialize({startOnLoad:true});&lt;/script&gt;
+&lt;/body&gt;
+</code></pre>
+<p><strong>相对链接</strong></p>
+<pre><code class="language-html">&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div class=&quot;mermaid&quot;&gt;
+  graph LR
+      A --- B
+      B--&gt;C[fa:fa-ban forbidden]
+      B--&gt;D(fa:fa-spinner);
+  &lt;/div&gt;
+  &lt;div class=&quot;mermaid&quot;&gt;
+     graph TD
+     A[Client] --&gt; B[Load Balancer]
+     B --&gt; C[Server1]
+     B --&gt; D[Server2]
+  &lt;/div&gt;
+  &lt;script src=&quot;C:\Users\MyPC\mermaid\dist\mermaid.js&quot;&gt;&lt;/script&gt;
+  &lt;script&gt;mermaid.initialize({startOnLoad:true});&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../0.绘图与建模_UML/UML.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../1.绘图与建模_MERMAID/时序图.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../0.绘图与建模_UML/UML.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../1.绘图与建模_MERMAID/时序图.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </body>
+</html>

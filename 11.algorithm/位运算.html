@@ -1,0 +1,392 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>位运算</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">我的笔记库</a></li><li class="chapter-item expanded affix "><li class="part-title">绘图与建模</li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.</strong> UML</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../0.绘图与建模_UML/UML.html"><strong aria-hidden="true">1.1.</strong> UML</a></li></ol></li><li class="chapter-item expanded "><a href="../1.绘图与建模_MERMAID/index.html"><strong aria-hidden="true">2.</strong> MERMAID</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../1.绘图与建模_MERMAID/时序图.html"><strong aria-hidden="true">2.1.</strong> 时序图</a></li><li class="chapter-item expanded "><a href="../1.绘图与建模_MERMAID/流程图.html"><strong aria-hidden="true">2.2.</strong> 流程图</a></li><li class="chapter-item expanded "><a href="../1.绘图与建模_MERMAID/类图.html"><strong aria-hidden="true">2.3.</strong> 类图</a></li><li class="chapter-item expanded "><a href="../1.绘图与建模_MERMAID/语法总览.html"><strong aria-hidden="true">2.4.</strong> 语法总览</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.</strong> Flowchart</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../2.绘图与建模_Flowchart/flowchart_fun.html"><strong aria-hidden="true">3.1.</strong> flowchart_fun</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> PlantUml</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../3.绘图与建模_PlantUml/plantUML语法.html"><strong aria-hidden="true">4.1.</strong> plantUML语法</a></li></ol></li><li class="chapter-item expanded "><li class="part-title"></li><li class="chapter-item expanded "><a href="../4.模板引擎/index.html"><strong aria-hidden="true">5.</strong> 模板引擎</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../4.模板引擎/mustache/index.html"><strong aria-hidden="true">5.1.</strong> mustache</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.</strong> 常用软件</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../5.常用软件/Multipass.html"><strong aria-hidden="true">6.1.</strong> Multipass</a></li><li class="chapter-item expanded "><a href="../5.常用软件/Wallabag.html"><strong aria-hidden="true">6.2.</strong> Wallabag</a></li><li class="chapter-item expanded "><a href="../5.常用软件/v2rayN代理.html"><strong aria-hidden="true">6.3.</strong> v2rayN代理</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">7.</strong> 生活事宜</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../6.生活事宜/个人清算汇缴.html"><strong aria-hidden="true">7.1.</strong> 个人清算汇缴</a></li></ol></li><li class="chapter-item expanded "><a href="../7.思考/index.html"><strong aria-hidden="true">8.</strong> 思考</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../7.思考/学习总结.html"><strong aria-hidden="true">8.1.</strong> 学习总结</a></li><li class="chapter-item expanded "><a href="../7.思考/杂项.html"><strong aria-hidden="true">8.2.</strong> 杂项</a></li><li class="chapter-item expanded "><a href="../7.思考/编程技巧.html"><strong aria-hidden="true">8.3.</strong> 编程技巧</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.</strong> 学习</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../8.学习/概率论与数理统计.html"><strong aria-hidden="true">9.1.</strong> 概率论与数理统计</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">10.</strong> 数据格式</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../9.数据格式/XML.html"><strong aria-hidden="true">10.1.</strong> XML</a></li><li class="chapter-item expanded "><a href="../9.数据格式/yaml.html"><strong aria-hidden="true">10.2.</strong> yaml</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">11.</strong> Linux</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../10.Linux/CFSBandwidthControl.html"><strong aria-hidden="true">11.1.</strong> CFSBandwidthControl</a></li><li class="chapter-item expanded "><a href="../10.Linux/LinuxFor.html"><strong aria-hidden="true">11.2.</strong> LinuxFor</a></li><li class="chapter-item expanded "><a href="../10.Linux/LinuxWOL设置.html"><strong aria-hidden="true">11.3.</strong> LinuxWOL设置</a></li><li class="chapter-item expanded "><a href="../10.Linux/Linux条件测试.html"><strong aria-hidden="true">11.4.</strong> Linux条件测试</a></li><li class="chapter-item expanded "><a href="../10.Linux/Seed.html"><strong aria-hidden="true">11.5.</strong> Seed</a></li><li class="chapter-item expanded "><a href="../10.Linux/VIM.html"><strong aria-hidden="true">11.6.</strong> VIM</a></li><li class="chapter-item expanded "><a href="../10.Linux/caseIn.html"><strong aria-hidden="true">11.7.</strong> caseIn</a></li><li class="chapter-item expanded "><a href="../10.Linux/cgroup.html"><strong aria-hidden="true">11.8.</strong> cgroup</a></li><li class="chapter-item expanded "><a href="../10.Linux/curl.html"><strong aria-hidden="true">11.9.</strong> curl</a></li><li class="chapter-item expanded "><a href="../10.Linux/dd.html"><strong aria-hidden="true">11.10.</strong> dd</a></li><li class="chapter-item expanded "><a href="../10.Linux/diffPatch.html"><strong aria-hidden="true">11.11.</strong> diffPatch</a></li><li class="chapter-item expanded "><a href="../10.Linux/find.html"><strong aria-hidden="true">11.12.</strong> find</a></li><li class="chapter-item expanded "><a href="../10.Linux/iptables.html"><strong aria-hidden="true">11.13.</strong> iptables</a></li><li class="chapter-item expanded "><a href="../10.Linux/jq.html"><strong aria-hidden="true">11.14.</strong> jq</a></li><li class="chapter-item expanded "><a href="../10.Linux/lsof.html"><strong aria-hidden="true">11.15.</strong> lsof</a></li><li class="chapter-item expanded "><a href="../10.Linux/ps.html"><strong aria-hidden="true">11.16.</strong> ps</a></li><li class="chapter-item expanded "><a href="../10.Linux/read.html"><strong aria-hidden="true">11.17.</strong> read</a></li><li class="chapter-item expanded "><a href="../10.Linux/scp.html"><strong aria-hidden="true">11.18.</strong> scp</a></li><li class="chapter-item expanded "><a href="../10.Linux/select.html"><strong aria-hidden="true">11.19.</strong> select</a></li><li class="chapter-item expanded "><a href="../10.Linux/service脚本.html"><strong aria-hidden="true">11.20.</strong> service脚本</a></li><li class="chapter-item expanded "><a href="../10.Linux/set.html"><strong aria-hidden="true">11.21.</strong> set</a></li><li class="chapter-item expanded "><a href="../10.Linux/shell字符串.html"><strong aria-hidden="true">11.22.</strong> shell字符串</a></li><li class="chapter-item expanded "><a href="../10.Linux/shell脚本参数.html"><strong aria-hidden="true">11.23.</strong> shell脚本参数</a></li><li class="chapter-item expanded "><a href="../10.Linux/stat.html"><strong aria-hidden="true">11.24.</strong> stat</a></li><li class="chapter-item expanded "><a href="../10.Linux/tar.html"><strong aria-hidden="true">11.25.</strong> tar</a></li><li class="chapter-item expanded "><a href="../10.Linux/top命令.html"><strong aria-hidden="true">11.26.</strong> top命令</a></li><li class="chapter-item expanded "><a href="../10.Linux/uidGidSetUidSetGid.html"><strong aria-hidden="true">11.27.</strong> uidGidSetUidSetGid</a></li><li class="chapter-item expanded "><a href="../10.Linux/wsl关闭提示音.html"><strong aria-hidden="true">11.28.</strong> wsl关闭提示音</a></li><li class="chapter-item expanded "><a href="../10.Linux/yum本地包依赖.html"><strong aria-hidden="true">11.29.</strong> yum本地包依赖</a></li><li class="chapter-item expanded "><a href="../10.Linux/大端与小端.html"><strong aria-hidden="true">11.30.</strong> 大端与小端</a></li><li class="chapter-item expanded "><a href="../10.Linux/确定Linux发行版本.html"><strong aria-hidden="true">11.31.</strong> 确定Linux发行版本</a></li><li class="chapter-item expanded "><a href="../10.Linux/零拷贝.html"><strong aria-hidden="true">11.32.</strong> 零拷贝</a></li><li class="chapter-item expanded "><a href="../10.Linux/默认值语法糖.html"><strong aria-hidden="true">11.33.</strong> 默认值语法糖</a></li></ol></li><li class="chapter-item expanded "><a href="../11.algorithm/index.html"><strong aria-hidden="true">12.</strong> algorithm</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../11.algorithm/Base64编码.html"><strong aria-hidden="true">12.1.</strong> Base64编码</a></li><li class="chapter-item expanded "><a href="../11.algorithm/Huffman编码.html"><strong aria-hidden="true">12.2.</strong> Huffman编码</a></li><li class="chapter-item expanded "><a href="../11.algorithm/base64.html"><strong aria-hidden="true">12.3.</strong> base64</a></li><li class="chapter-item expanded "><a href="../11.algorithm/fnv-hash算法.html"><strong aria-hidden="true">12.4.</strong> fnv-hash算法</a></li><li class="chapter-item expanded "><a href="../11.algorithm/二叉搜索平衡树.html"><strong aria-hidden="true">12.5.</strong> 二叉搜索平衡树</a></li><li class="chapter-item expanded "><a href="../11.algorithm/位运算.html" class="active"><strong aria-hidden="true">12.6.</strong> 位运算</a></li><li class="chapter-item expanded "><a href="../11.algorithm/动态规划.html"><strong aria-hidden="true">12.7.</strong> 动态规划</a></li><li class="chapter-item expanded "><a href="../11.algorithm/动态规划-新.html"><strong aria-hidden="true">12.8.</strong> 动态规划-新</a></li><li class="chapter-item expanded "><a href="../11.algorithm/字符编码.html"><strong aria-hidden="true">12.9.</strong> 字符编码</a></li><li class="chapter-item expanded "><a href="../11.algorithm/布隆过滤器.html"><strong aria-hidden="true">12.10.</strong> 布隆过滤器</a></li><li class="chapter-item expanded "><a href="../11.algorithm/浮点数.html"><strong aria-hidden="true">12.11.</strong> 浮点数</a></li><li class="chapter-item expanded "><a href="../11.algorithm/红黑树.html"><strong aria-hidden="true">12.12.</strong> 红黑树</a></li><li class="chapter-item expanded "><a href="../11.algorithm/贪心算法.html"><strong aria-hidden="true">12.13.</strong> 贪心算法</a></li><li class="chapter-item expanded "><a href="../11.algorithm/逆波兰表达式.html"><strong aria-hidden="true">12.14.</strong> 逆波兰表达式</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="位运算介绍"><a class="header" href="#位运算介绍">位运算介绍</a></h1>
+<blockquote>
+<p>程序中的所有数在计算机内存中都是以二进制的形式储存的。位运算就是直接对<strong>整数在内存中的二进制位进行操作</strong>。</p>
+</blockquote>
+<p>位运算就是直接操作二进制数，那么有哪些种类的位运算呢？</p>
+<h2 id="与"><a class="header" href="#与"><strong>&amp; (与)</strong></a></h2>
+<p><strong>规则</strong>：将整数对应的 二进制对应 按位进行逻辑AND运算</p>
+<p><strong>真值表</strong>：</p>
+<table><thead><tr><th></th><th>1</th><th>0</th></tr></thead><tbody>
+<tr><td>1</td><td>1</td><td>0</td></tr>
+<tr><td>0</td><td>0</td><td>0</td></tr>
+</tbody></table>
+<h2 id="-或"><a class="header" href="#-或"><strong>| (或)</strong></a></h2>
+<p><strong>真值表</strong></p>
+<table><thead><tr><th></th><th>1</th><th>0</th></tr></thead><tbody>
+<tr><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>0</td><td>1</td><td>0</td></tr>
+</tbody></table>
+<h2 id="-异或"><a class="header" href="#-异或"><strong>^ (异或)</strong></a></h2>
+<p>**</p>
+<table><thead><tr><th></th><th>1</th><th>0</th></tr></thead><tbody>
+<tr><td>1</td><td>0</td><td>1</td></tr>
+<tr><td>0</td><td>1</td><td>1</td></tr>
+</tbody></table>
+<h2 id="取反"><a class="header" href="#取反"><strong>取反~</strong></a></h2>
+<p>如果是1，则为0，如果是0则为1</p>
+<h2 id="移位运算符"><a class="header" href="#移位运算符"><strong>移位运算符</strong></a></h2>
+<p>左移运算&lt;&lt;：左移后右边位补 0，高位溢出</p>
+<p>带符号右移运算&gt;&gt;：右移后左边位补符号位</p>
+<p>无符号右移运算&gt;&gt;&gt;：右移后左边位补 0</p>
+<h1 id="位运算小技巧"><a class="header" href="#位运算小技巧"><strong>位运算小技巧</strong></a></h1>
+<h2 id="奇偶判断"><a class="header" href="#奇偶判断">奇偶判断</a></h2>
+<pre><code class="language-java">//普通算法
+if( n % 2 == 1)
+    // n 是个奇数
+}
+
+//位运算
+if(n &amp; 1 == 1){
+    // n 是个奇数。
+}
+</code></pre>
+<p>其核心就是判断二进制的<strong>最后一位是否为1</strong>，如果为1那么结果加上2^0=1一定是个奇数，否则就是个偶数。</p>
+<h2 id="交换两个数"><a class="header" href="#交换两个数"><strong>交换两个数</strong></a></h2>
+<pre><code class="language-java">a=a^b;//a=a^b
+b=a^b;//b=(a^b)^b=a^0=a
+a=a^b;//a=(a^b)^(a^b^b)=0^b=0
+</code></pre>
+<h2 id="二进制枚举"><a class="header" href="#二进制枚举"><strong>二进制枚举</strong></a></h2>
+<blockquote>
+<p>每一个二进制位就是一种状态，</p>
+</blockquote>
+<pre><code class="language-java">for(int i = 0; i &lt; (1&lt;&lt;n); i++) //从0～2^n-1个状态
+{
+  for(int j = 0; j &lt; n; j++) //遍历二进制的每一位 共n位
+  {
+    if(i &amp; (1 &lt;&lt; j))//判断二进制数字i的第j位是否存在
+    {
+      //操作或者输出
+    }
+  }
+}
+</code></pre>
+<h2 id="不用加减乘除做加法"><a class="header" href="#不用加减乘除做加法"><strong>不用加减乘除做加法</strong></a></h2>
+<blockquote>
+<p>核心：<strong>a&amp;b</strong> 得到需要进位的，左移一位，a^b 直接相加</p>
+</blockquote>
+<pre><code class="language-c++">public class Solution {
+     public int Add(int num1,int num2) {
+  /*
+   *  5+3   5^3(0110)   5&amp;3(0001) 
+   *  0101    
+   *  0011 
+   */
+  int a=num1^num2;
+  int b=num1&amp;num2;
+  b=b&lt;&lt;1;
+  if(b==0)return a;
+  else {
+   return Add(a, b);
+  }        
+  }
+}
+</code></pre>
+<h2 id="二进制中1的个数"><a class="header" href="#二进制中1的个数"><strong>二进制中1的个数</strong></a></h2>
+<h3 id="法一"><a class="header" href="#法一"><strong>法一</strong></a></h3>
+<p><strong>暴力搜索</strong></p>
+<pre><code class="language-java">public int NumberOf1(int n) {
+  int va=0;
+  for(int i=0;i&lt;32;i++)
+  {
+    if((n&amp;(1&lt;&lt;i))!=0)
+    {           
+      va++;
+    }
+  }
+  return va;       
+}
+</code></pre>
+<h3 id="法二"><a class="header" href="#法二"><strong>法二</strong></a></h3>
+<p><strong>每次消除 最小的那个1</strong></p>
+<pre><code class="language-c++">public class Solution {
+    public int NumberOf1(int n) {
+    int count=0;
+    while (n!=0) {
+     n=n&amp;(n-1);
+     count++;
+    }
+    return count;
+ }
+}
+</code></pre>
+<h2 id="只出现一次的一个数字①"><a class="header" href="#只出现一次的一个数字①"><strong>只出现一次的(一个)数字</strong>①</a></h2>
+<p><strong>问题描述</strong></p>
+<ul>
+<li><strong>给定一个非空整数数组，除了某个元素只出现一次以外，<strong>其余每个元素均出现两次</strong>。找出那个只出现了一次的元素。</strong></li>
+<li>异或运算特点： 
+<ul>
+<li><strong>0和任意数字进行异或操作结果为数字本身.</strong></li>
+<li><strong>两个相同的数字进行异或的结果为0.</strong></li>
+</ul>
+</li>
+</ul>
+<p>对所有数组元素，求 异或则可以找出那个 一次元素的值</p>
+<pre><code class="language-c++">class Solution {
+    public int singleNumber(int[] nums) {
+        int value=0;
+        for(int i=0;i&lt;nums.length;i++)
+        {
+            value^=nums[i];
+        }
+        return value;
+    }
+}
+</code></pre>
+<h2 id="只出现一次的一个数字②"><a class="header" href="#只出现一次的一个数字②"><strong>只出现一次的(一个)数字②</strong></a></h2>
+<p>判断 数组中所有元素，32位 中，为1的个数应为3的倍数，如果不是3的倍数 则相加</p>
+<pre><code class="language-java">class Solution {
+    public int singleNumber(int[] nums) {
+        int value=0;
+        for(int i=0;i&lt;32;i++)
+        {
+            int sum=0;
+            for(int num:nums)
+            {
+                if(((num&gt;&gt;i)&amp;1)==1)
+                {
+                    sum++;
+                }
+            }
+            if(sum%3==1)
+                value+=(1&lt;&lt;i);
+        }
+        return value;
+    }
+}
+</code></pre>
+<h2 id="只出现一次的两个数字③"><a class="header" href="#只出现一次的两个数字③"><strong>只出现一次的(两个)数字③</strong></a></h2>
+<p>一个整型数组里除了两个数字之外，<strong>其他的数字都出现了两次</strong>。请写程序找出这两个只出现一次的数字。</p>
+<ul>
+<li>先异或一遍，得到 <code>a^b</code> 的值</li>
+<li>然后 取第一个为1的位位 n</li>
+<li>再将数组一分为2，第n位为0的 一定存在一个只出现一次的数，该位为1的一定也存在一个 只出现一次的数</li>
+</ul>
+<pre><code class="language-java">public int[] singleNumbers(int[] nums) {
+    int value[]=new int[2];
+    if(nums.length==2)
+        return  nums;
+    int val=0;//异或求的值
+    for(int i=0;i&lt;nums.length;i++)
+    {
+        val^=nums[i];
+    }
+    int index=getFirst1(val);
+    int num1=0,num2=0;
+    for(int i=0;i&lt;nums.length;i++)
+    {
+        if(((nums[i]&gt;&gt;index)&amp;1)==0)//如果这个数第index为0 和num1异或
+            num1^=nums[i];
+        else//否则和 num2 异或
+            num2^=nums[i];
+    }
+    value[0]=num1;
+    value[1]=num2;
+    return  value;
+}
+
+private int getFirst1(int val) {
+    int index=0;
+    while (((val&amp;1)==0&amp;&amp;index&lt;32))
+    {
+        val&gt;&gt;=1;// val=val/2
+        index++;
+    }
+    return index;
+}
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../11.algorithm/二叉搜索平衡树.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../11.algorithm/动态规划.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../11.algorithm/二叉搜索平衡树.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../11.algorithm/动态规划.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </body>
+</html>

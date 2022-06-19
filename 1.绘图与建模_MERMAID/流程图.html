@@ -1,0 +1,407 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>流程图</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">我的笔记库</a></li><li class="chapter-item expanded affix "><li class="part-title">绘图与建模</li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.</strong> UML</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../0.绘图与建模_UML/UML.html"><strong aria-hidden="true">1.1.</strong> UML</a></li></ol></li><li class="chapter-item expanded "><a href="../1.绘图与建模_MERMAID/index.html"><strong aria-hidden="true">2.</strong> MERMAID</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../1.绘图与建模_MERMAID/时序图.html"><strong aria-hidden="true">2.1.</strong> 时序图</a></li><li class="chapter-item expanded "><a href="../1.绘图与建模_MERMAID/流程图.html" class="active"><strong aria-hidden="true">2.2.</strong> 流程图</a></li><li class="chapter-item expanded "><a href="../1.绘图与建模_MERMAID/类图.html"><strong aria-hidden="true">2.3.</strong> 类图</a></li><li class="chapter-item expanded "><a href="../1.绘图与建模_MERMAID/语法总览.html"><strong aria-hidden="true">2.4.</strong> 语法总览</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.</strong> Flowchart</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../2.绘图与建模_Flowchart/flowchart_fun.html"><strong aria-hidden="true">3.1.</strong> flowchart_fun</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> PlantUml</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../3.绘图与建模_PlantUml/plantUML语法.html"><strong aria-hidden="true">4.1.</strong> plantUML语法</a></li></ol></li><li class="chapter-item expanded "><li class="part-title"></li><li class="chapter-item expanded "><a href="../4.模板引擎/index.html"><strong aria-hidden="true">5.</strong> 模板引擎</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../4.模板引擎/mustache/index.html"><strong aria-hidden="true">5.1.</strong> mustache</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.</strong> 常用软件</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../5.常用软件/Multipass.html"><strong aria-hidden="true">6.1.</strong> Multipass</a></li><li class="chapter-item expanded "><a href="../5.常用软件/Wallabag.html"><strong aria-hidden="true">6.2.</strong> Wallabag</a></li><li class="chapter-item expanded "><a href="../5.常用软件/v2rayN代理.html"><strong aria-hidden="true">6.3.</strong> v2rayN代理</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">7.</strong> 生活事宜</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../6.生活事宜/个人清算汇缴.html"><strong aria-hidden="true">7.1.</strong> 个人清算汇缴</a></li></ol></li><li class="chapter-item expanded "><a href="../7.思考/index.html"><strong aria-hidden="true">8.</strong> 思考</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../7.思考/学习总结.html"><strong aria-hidden="true">8.1.</strong> 学习总结</a></li><li class="chapter-item expanded "><a href="../7.思考/杂项.html"><strong aria-hidden="true">8.2.</strong> 杂项</a></li><li class="chapter-item expanded "><a href="../7.思考/编程技巧.html"><strong aria-hidden="true">8.3.</strong> 编程技巧</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.</strong> 学习</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../8.学习/概率论与数理统计.html"><strong aria-hidden="true">9.1.</strong> 概率论与数理统计</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">10.</strong> 数据格式</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../9.数据格式/XML.html"><strong aria-hidden="true">10.1.</strong> XML</a></li><li class="chapter-item expanded "><a href="../9.数据格式/yaml.html"><strong aria-hidden="true">10.2.</strong> yaml</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">11.</strong> Linux</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../10.Linux/CFSBandwidthControl.html"><strong aria-hidden="true">11.1.</strong> CFSBandwidthControl</a></li><li class="chapter-item expanded "><a href="../10.Linux/LinuxFor.html"><strong aria-hidden="true">11.2.</strong> LinuxFor</a></li><li class="chapter-item expanded "><a href="../10.Linux/LinuxWOL设置.html"><strong aria-hidden="true">11.3.</strong> LinuxWOL设置</a></li><li class="chapter-item expanded "><a href="../10.Linux/Linux条件测试.html"><strong aria-hidden="true">11.4.</strong> Linux条件测试</a></li><li class="chapter-item expanded "><a href="../10.Linux/Seed.html"><strong aria-hidden="true">11.5.</strong> Seed</a></li><li class="chapter-item expanded "><a href="../10.Linux/VIM.html"><strong aria-hidden="true">11.6.</strong> VIM</a></li><li class="chapter-item expanded "><a href="../10.Linux/caseIn.html"><strong aria-hidden="true">11.7.</strong> caseIn</a></li><li class="chapter-item expanded "><a href="../10.Linux/cgroup.html"><strong aria-hidden="true">11.8.</strong> cgroup</a></li><li class="chapter-item expanded "><a href="../10.Linux/curl.html"><strong aria-hidden="true">11.9.</strong> curl</a></li><li class="chapter-item expanded "><a href="../10.Linux/dd.html"><strong aria-hidden="true">11.10.</strong> dd</a></li><li class="chapter-item expanded "><a href="../10.Linux/diffPatch.html"><strong aria-hidden="true">11.11.</strong> diffPatch</a></li><li class="chapter-item expanded "><a href="../10.Linux/find.html"><strong aria-hidden="true">11.12.</strong> find</a></li><li class="chapter-item expanded "><a href="../10.Linux/iptables.html"><strong aria-hidden="true">11.13.</strong> iptables</a></li><li class="chapter-item expanded "><a href="../10.Linux/jq.html"><strong aria-hidden="true">11.14.</strong> jq</a></li><li class="chapter-item expanded "><a href="../10.Linux/lsof.html"><strong aria-hidden="true">11.15.</strong> lsof</a></li><li class="chapter-item expanded "><a href="../10.Linux/ps.html"><strong aria-hidden="true">11.16.</strong> ps</a></li><li class="chapter-item expanded "><a href="../10.Linux/read.html"><strong aria-hidden="true">11.17.</strong> read</a></li><li class="chapter-item expanded "><a href="../10.Linux/scp.html"><strong aria-hidden="true">11.18.</strong> scp</a></li><li class="chapter-item expanded "><a href="../10.Linux/select.html"><strong aria-hidden="true">11.19.</strong> select</a></li><li class="chapter-item expanded "><a href="../10.Linux/service脚本.html"><strong aria-hidden="true">11.20.</strong> service脚本</a></li><li class="chapter-item expanded "><a href="../10.Linux/set.html"><strong aria-hidden="true">11.21.</strong> set</a></li><li class="chapter-item expanded "><a href="../10.Linux/shell字符串.html"><strong aria-hidden="true">11.22.</strong> shell字符串</a></li><li class="chapter-item expanded "><a href="../10.Linux/shell脚本参数.html"><strong aria-hidden="true">11.23.</strong> shell脚本参数</a></li><li class="chapter-item expanded "><a href="../10.Linux/stat.html"><strong aria-hidden="true">11.24.</strong> stat</a></li><li class="chapter-item expanded "><a href="../10.Linux/tar.html"><strong aria-hidden="true">11.25.</strong> tar</a></li><li class="chapter-item expanded "><a href="../10.Linux/top命令.html"><strong aria-hidden="true">11.26.</strong> top命令</a></li><li class="chapter-item expanded "><a href="../10.Linux/uidGidSetUidSetGid.html"><strong aria-hidden="true">11.27.</strong> uidGidSetUidSetGid</a></li><li class="chapter-item expanded "><a href="../10.Linux/wsl关闭提示音.html"><strong aria-hidden="true">11.28.</strong> wsl关闭提示音</a></li><li class="chapter-item expanded "><a href="../10.Linux/yum本地包依赖.html"><strong aria-hidden="true">11.29.</strong> yum本地包依赖</a></li><li class="chapter-item expanded "><a href="../10.Linux/大端与小端.html"><strong aria-hidden="true">11.30.</strong> 大端与小端</a></li><li class="chapter-item expanded "><a href="../10.Linux/确定Linux发行版本.html"><strong aria-hidden="true">11.31.</strong> 确定Linux发行版本</a></li><li class="chapter-item expanded "><a href="../10.Linux/零拷贝.html"><strong aria-hidden="true">11.32.</strong> 零拷贝</a></li><li class="chapter-item expanded "><a href="../10.Linux/默认值语法糖.html"><strong aria-hidden="true">11.33.</strong> 默认值语法糖</a></li></ol></li><li class="chapter-item expanded "><a href="../11.algorithm/index.html"><strong aria-hidden="true">12.</strong> algorithm</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../11.algorithm/Base64编码.html"><strong aria-hidden="true">12.1.</strong> Base64编码</a></li><li class="chapter-item expanded "><a href="../11.algorithm/Huffman编码.html"><strong aria-hidden="true">12.2.</strong> Huffman编码</a></li><li class="chapter-item expanded "><a href="../11.algorithm/base64.html"><strong aria-hidden="true">12.3.</strong> base64</a></li><li class="chapter-item expanded "><a href="../11.algorithm/fnv-hash算法.html"><strong aria-hidden="true">12.4.</strong> fnv-hash算法</a></li><li class="chapter-item expanded "><a href="../11.algorithm/二叉搜索平衡树.html"><strong aria-hidden="true">12.5.</strong> 二叉搜索平衡树</a></li><li class="chapter-item expanded "><a href="../11.algorithm/位运算.html"><strong aria-hidden="true">12.6.</strong> 位运算</a></li><li class="chapter-item expanded "><a href="../11.algorithm/动态规划.html"><strong aria-hidden="true">12.7.</strong> 动态规划</a></li><li class="chapter-item expanded "><a href="../11.algorithm/动态规划-新.html"><strong aria-hidden="true">12.8.</strong> 动态规划-新</a></li><li class="chapter-item expanded "><a href="../11.algorithm/字符编码.html"><strong aria-hidden="true">12.9.</strong> 字符编码</a></li><li class="chapter-item expanded "><a href="../11.algorithm/布隆过滤器.html"><strong aria-hidden="true">12.10.</strong> 布隆过滤器</a></li><li class="chapter-item expanded "><a href="../11.algorithm/浮点数.html"><strong aria-hidden="true">12.11.</strong> 浮点数</a></li><li class="chapter-item expanded "><a href="../11.algorithm/红黑树.html"><strong aria-hidden="true">12.12.</strong> 红黑树</a></li><li class="chapter-item expanded "><a href="../11.algorithm/贪心算法.html"><strong aria-hidden="true">12.13.</strong> 贪心算法</a></li><li class="chapter-item expanded "><a href="../11.algorithm/逆波兰表达式.html"><strong aria-hidden="true">12.14.</strong> 逆波兰表达式</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="flowcharts"><a class="header" href="#flowcharts">Flowcharts</a></h1>
+<h2 id="方向定义"><a class="header" href="#方向定义">方向定义</a></h2>
+<p><strong>基本语法</strong></p>
+<pre><code>graph 方向描述
+    图表中的其他语句...
+</code></pre>
+<p><strong>方向描述</strong></p>
+<table><thead><tr><th>用词</th><th>含义</th></tr></thead><tbody>
+<tr><td>TB</td><td>从上到下</td></tr>
+<tr><td>BT</td><td>从下到上</td></tr>
+<tr><td>RL</td><td>从右到左</td></tr>
+<tr><td>LR</td><td>从左到右</td></tr>
+</tbody></table>
+<h2 id="节点形状"><a class="header" href="#节点形状">节点形状</a></h2>
+<p>即流程图中每个文本块，包括开始、结束、处理、判断等。Mermaid 中每个节点都有一个 id，以及节点的文字。</p>
+<table><thead><tr><th>表述</th><th>说明</th></tr></thead><tbody>
+<tr><td><code>id[文字]</code></td><td>矩形节点</td></tr>
+<tr><td><code>id(文字)</code></td><td>圆角矩形</td></tr>
+<tr><td><code>id1([This is the text in the box])</code></td><td>体育场</td></tr>
+<tr><td><code>id((文字))</code></td><td>圆形节点</td></tr>
+<tr><td><code>id&gt;文字]</code></td><td>右向旗帜状，不对称</td></tr>
+<tr><td><code>id{文字}</code></td><td>菱形</td></tr>
+<tr><td><code>id1[[This is the text in the box]]</code></td><td>子例程形状</td></tr>
+<tr><td><code>id1[(Database)]</code></td><td>柱状</td></tr>
+<tr><td><code>id1{{This is the text in the box}}</code></td><td>六边形</td></tr>
+<tr><td><code>id1[/This is the text in the box/]</code> or <code>id1[\This is the text in the box\]</code></td><td>平行四边形</td></tr>
+<tr><td><code>A[/Christmas\] or B[\Go shopping/]</code></td><td>梯形</td></tr>
+</tbody></table>
+<h2 id="连接线"><a class="header" href="#连接线">连接线</a></h2>
+<table><thead><tr><th>格式</th><th>效果</th></tr></thead><tbody>
+<tr><td><code>A--&gt;B</code></td><td>实线，箭头，无文字</td></tr>
+<tr><td><code>A---B</code></td><td>实线，无箭头，无文字</td></tr>
+<tr><td><code>A--文字---B</code>或`A---</td><td>文字</td></tr>
+<tr><td><code>A--文字--&gt;B</code>或`A--&gt;</td><td>文字</td></tr>
+<tr><td><code>A-.-&gt;B</code></td><td>虚线，箭头，无文字</td></tr>
+<tr><td><code>A-.文字.-&gt;B</code></td><td>虚线，箭头，文字</td></tr>
+<tr><td><code>A==&gt;B</code></td><td>大箭头，无文字</td></tr>
+<tr><td><code>A==文字==&gt;B</code></td><td>大箭头，文字</td></tr>
+<tr><td><code>A -- text --&gt; B -- text2 --&gt; C</code></td><td>箭头链</td></tr>
+<tr><td><code>a --&gt; b &amp; c--&gt; d</code></td><td>多方向</td></tr>
+<tr><td><code>A &amp; B--&gt; C &amp; D</code></td><td>a,b同时都指向 c,d</td></tr>
+</tbody></table>
+<p><strong>长度，虚实，箭头</strong></p>
+<table><thead><tr><th>Length</th><th>1</th><th>2</th><th>3</th></tr></thead><tbody>
+<tr><td>Normal</td><td><code>---</code></td><td><code>----</code></td><td><code>-----</code></td></tr>
+<tr><td>Normal with arrow</td><td><code>--&gt;</code></td><td><code>---&gt;</code></td><td><code>----&gt;</code></td></tr>
+<tr><td>Thick</td><td><code>===</code></td><td><code>====</code></td><td><code>=====</code></td></tr>
+<tr><td>Thick with arrow</td><td><code>==&gt;</code></td><td><code>===&gt;</code></td><td><code>====&gt;</code></td></tr>
+<tr><td>Dotted</td><td><code>-.-</code></td><td><code>-..-</code></td><td><code>-...-</code></td></tr>
+<tr><td>Dotted with arrow</td><td><code>-.-&gt;</code></td><td><code>-..-&gt;</code></td><td><code>-...-&gt;</code></td></tr>
+</tbody></table>
+<h2 id="文本块"><a class="header" href="#文本块">文本块</a></h2>
+<p>使用 双引号 包裹 文本块</p>
+<h2 id="使用特殊字符"><a class="header" href="#使用特殊字符">使用特殊字符</a></h2>
+<pre><code class="language-mermaid">  graph LR
+        A[&quot;A double quote:#quot;&quot;] --&gt;B[&quot;A dec char:#9829;&quot;]
+</code></pre>
+<h2 id="子图"><a class="header" href="#子图">子图</a></h2>
+<p><strong>语法</strong></p>
+<pre><code>subgraph title
+    graph definition
+end
+</code></pre>
+<p><strong>example</strong></p>
+<pre><code>graph TB
+    c1--&gt;a2
+    subgraph one
+    a1--&gt;a2
+    end
+    subgraph two
+    b1--&gt;b2
+    end
+    subgraph three
+    c1--&gt;c2
+    end
+</code></pre>
+<p><strong>指定显示ID</strong></p>
+<pre><code>graph TB
+    c1--&gt;a2
+    subgraph ide1 [one]
+    a1--&gt;a2
+    end
+</code></pre>
+<h2 id="flowcharts-1"><a class="header" href="#flowcharts-1">flowcharts</a></h2>
+<p>使用graphtype流程图，也可以如下图所示在子图之间设置边线。</p>
+<pre><code>flowchart TB
+    c1--&gt;a2
+    subgraph one
+    a1--&gt;a2
+    end
+    subgraph two
+    b1--&gt;b2
+    end
+    subgraph three
+    c1--&gt;c2
+    end
+    one --&gt; two
+    three --&gt; two
+    two --&gt; c2
+</code></pre>
+<h2 id="交互"><a class="header" href="#交互">交互</a></h2>
+<p>可以将click事件绑定到节点，单击可能导致JavaScript回调或链接，该链接将在新的浏览器选项卡中打开。
+注意：使用securityLevel ='strict'时禁用此功能，而使用securityLevel ='loose'时启用。</p>
+<p><strong>语法</strong></p>
+<pre><code>click nodeId callback
+click nodeId call callback()
+</code></pre>
+<ul>
+<li>nodeId is the id of the node</li>
+<li>callback is the name of a javascript function defined on the page displaying the graph, the function will be called with the nodeId as parameter.</li>
+</ul>
+<pre><code>&lt;body&gt;
+  &lt;div class=&quot;mermaid&quot;&gt;
+    graph LR;
+        A--&gt;B;
+        B--&gt;C;
+        C--&gt;D;
+        click A callback &quot;Tooltip&quot;
+        click B &quot;http://www.github.com&quot; &quot;This is a link&quot;
+        click C call callback() &quot;Tooltip&quot;
+        click D href &quot;http://www.github.com&quot; &quot;This is a link&quot;
+  &lt;/div&gt;
+
+  &lt;script&gt;
+    var callback = function(){
+        alert('A callback was triggered');
+    }
+    var config = {
+        startOnLoad:true,
+        flowchart:{
+            useMaxWidth:true,
+            htmlLabels:true,
+            curve:'cardinal',
+        },
+        securityLevel:'loose',
+    };
+
+    mermaid.initialize(config);
+  &lt;/script&gt;
+&lt;/body&gt;
+</code></pre>
+<h2 id="打开文件页面"><a class="header" href="#打开文件页面">打开文件页面</a></h2>
+<pre><code>graph LR
+A--&gt;B[新窗口打开当前页面]
+    click B &quot;README.md&quot;
+</code></pre>
+<h2 id="注释"><a class="header" href="#注释"><strong>注释</strong></a></h2>
+<pre><code>graph LR
+%% this is a comment A -- text --&gt; B{node}
+   A -- text --&gt; B -- text2 --&gt; C
+</code></pre>
+<p>可以在流程图中输入注释，解析器将忽略它们。
+注释必须自己一行，并且必须以%%（双百分号）开头。
+注释开始到下一个换行符之后的所有文本都将被视为注释，包括任何流语法</p>
+<h2 id="样式"><a class="header" href="#样式">样式</a></h2>
+<h3 id="linkstyle"><a class="header" href="#linkstyle">linkStyle</a></h3>
+<p>linkStyle 后面的数字表示第几根线，从 0 开始。可以指定颜色和粗细。</p>
+<pre><code>graph TD;
+    A--&gt;B;
+    A--&gt;C;
+    B--&gt;D;
+    C--&gt;D;
+    linkStyle 0 stroke:#0ff,stroke-width:2px;
+    linkStyle 3 stroke:#ff3,stroke-width:4px;
+</code></pre>
+<h3 id="结点样式"><a class="header" href="#结点样式">结点样式</a></h3>
+<pre><code>graph LR
+    id1(Start)--&gt;id2(Stop)
+    style id1 fill:#f9f,stroke:#333,stroke-width:4px
+    style id2 fill:#bbf,stroke:#f66,stroke-width:2px,color:#fff,stroke-dasharray: 5 5
+</code></pre>
+<h3 id="样式类"><a class="header" href="#样式类">样式类</a></h3>
+<pre><code>    classDef className fill:#f9f,stroke:#333,stroke-width:4px;
+    class nodeId1 className;
+    class nodeId1,nodeId2 className;
+    
+    
+    graph LR
+    A:::someclass --&gt; B
+    classDef someclass fill:#f96;
+</code></pre>
+<h3 id="css样式"><a class="header" href="#css样式">css样式</a></h3>
+<pre><code>&lt;style&gt;
+    .cssClass &gt; rect{
+        fill:#FF0000;
+        stroke:#FFFF00;
+        stroke-width:4px;
+    }
+&lt;/style&gt;
+
+graph LR;
+    A--&gt;B[AAA&lt;span&gt;BBB&lt;/span&gt;];
+    B--&gt;D;
+    class A cssClass;
+</code></pre>
+<h3 id="default-class"><a class="header" href="#default-class">Default class</a></h3>
+<p>默认赋给所有图形 </p>
+<pre><code>  classDef default fill:#f9f,stroke:#333,stroke-width:4px;
+</code></pre>
+<h2 id="fontawaresome"><a class="header" href="#fontawaresome">fontawaresome</a></h2>
+<pre><code>graph TD
+    B[&quot;fa:fa-twitter for peace&quot;]
+    B--&gt;C[fa:fa-ban forbidden]
+    B--&gt;D(fa:fa-spinner);
+    B--&gt;E(A fa:fa-camera-retro perhaps?);
+</code></pre>
+<h2 id="配置"><a class="header" href="#配置">配置</a></h2>
+<p>可以调整渲染流程图的宽度。</p>
+<pre><code>mermaid.flowchartConfig = {
+    width: 100%
+}
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../1.绘图与建模_MERMAID/时序图.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../1.绘图与建模_MERMAID/类图.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../1.绘图与建模_MERMAID/时序图.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../1.绘图与建模_MERMAID/类图.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </body>
+</html>

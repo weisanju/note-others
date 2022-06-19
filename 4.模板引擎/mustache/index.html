@@ -1,0 +1,393 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>mustache</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../index.html">我的笔记库</a></li><li class="chapter-item expanded affix "><li class="part-title">绘图与建模</li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.</strong> UML</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../0.绘图与建模_UML/UML.html"><strong aria-hidden="true">1.1.</strong> UML</a></li></ol></li><li class="chapter-item expanded "><a href="../../1.绘图与建模_MERMAID/index.html"><strong aria-hidden="true">2.</strong> MERMAID</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../1.绘图与建模_MERMAID/时序图.html"><strong aria-hidden="true">2.1.</strong> 时序图</a></li><li class="chapter-item expanded "><a href="../../1.绘图与建模_MERMAID/流程图.html"><strong aria-hidden="true">2.2.</strong> 流程图</a></li><li class="chapter-item expanded "><a href="../../1.绘图与建模_MERMAID/类图.html"><strong aria-hidden="true">2.3.</strong> 类图</a></li><li class="chapter-item expanded "><a href="../../1.绘图与建模_MERMAID/语法总览.html"><strong aria-hidden="true">2.4.</strong> 语法总览</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.</strong> Flowchart</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../2.绘图与建模_Flowchart/flowchart_fun.html"><strong aria-hidden="true">3.1.</strong> flowchart_fun</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> PlantUml</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../3.绘图与建模_PlantUml/plantUML语法.html"><strong aria-hidden="true">4.1.</strong> plantUML语法</a></li></ol></li><li class="chapter-item expanded "><li class="part-title"></li><li class="chapter-item expanded "><a href="../../4.模板引擎/index.html"><strong aria-hidden="true">5.</strong> 模板引擎</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../4.模板引擎/mustache/index.html" class="active"><strong aria-hidden="true">5.1.</strong> mustache</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.</strong> 常用软件</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../5.常用软件/Multipass.html"><strong aria-hidden="true">6.1.</strong> Multipass</a></li><li class="chapter-item expanded "><a href="../../5.常用软件/Wallabag.html"><strong aria-hidden="true">6.2.</strong> Wallabag</a></li><li class="chapter-item expanded "><a href="../../5.常用软件/v2rayN代理.html"><strong aria-hidden="true">6.3.</strong> v2rayN代理</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">7.</strong> 生活事宜</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../6.生活事宜/个人清算汇缴.html"><strong aria-hidden="true">7.1.</strong> 个人清算汇缴</a></li></ol></li><li class="chapter-item expanded "><a href="../../7.思考/index.html"><strong aria-hidden="true">8.</strong> 思考</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../7.思考/学习总结.html"><strong aria-hidden="true">8.1.</strong> 学习总结</a></li><li class="chapter-item expanded "><a href="../../7.思考/杂项.html"><strong aria-hidden="true">8.2.</strong> 杂项</a></li><li class="chapter-item expanded "><a href="../../7.思考/编程技巧.html"><strong aria-hidden="true">8.3.</strong> 编程技巧</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.</strong> 学习</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../8.学习/概率论与数理统计.html"><strong aria-hidden="true">9.1.</strong> 概率论与数理统计</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">10.</strong> 数据格式</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../9.数据格式/XML.html"><strong aria-hidden="true">10.1.</strong> XML</a></li><li class="chapter-item expanded "><a href="../../9.数据格式/yaml.html"><strong aria-hidden="true">10.2.</strong> yaml</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">11.</strong> Linux</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../10.Linux/CFSBandwidthControl.html"><strong aria-hidden="true">11.1.</strong> CFSBandwidthControl</a></li><li class="chapter-item expanded "><a href="../../10.Linux/LinuxFor.html"><strong aria-hidden="true">11.2.</strong> LinuxFor</a></li><li class="chapter-item expanded "><a href="../../10.Linux/LinuxWOL设置.html"><strong aria-hidden="true">11.3.</strong> LinuxWOL设置</a></li><li class="chapter-item expanded "><a href="../../10.Linux/Linux条件测试.html"><strong aria-hidden="true">11.4.</strong> Linux条件测试</a></li><li class="chapter-item expanded "><a href="../../10.Linux/Seed.html"><strong aria-hidden="true">11.5.</strong> Seed</a></li><li class="chapter-item expanded "><a href="../../10.Linux/VIM.html"><strong aria-hidden="true">11.6.</strong> VIM</a></li><li class="chapter-item expanded "><a href="../../10.Linux/caseIn.html"><strong aria-hidden="true">11.7.</strong> caseIn</a></li><li class="chapter-item expanded "><a href="../../10.Linux/cgroup.html"><strong aria-hidden="true">11.8.</strong> cgroup</a></li><li class="chapter-item expanded "><a href="../../10.Linux/curl.html"><strong aria-hidden="true">11.9.</strong> curl</a></li><li class="chapter-item expanded "><a href="../../10.Linux/dd.html"><strong aria-hidden="true">11.10.</strong> dd</a></li><li class="chapter-item expanded "><a href="../../10.Linux/diffPatch.html"><strong aria-hidden="true">11.11.</strong> diffPatch</a></li><li class="chapter-item expanded "><a href="../../10.Linux/find.html"><strong aria-hidden="true">11.12.</strong> find</a></li><li class="chapter-item expanded "><a href="../../10.Linux/iptables.html"><strong aria-hidden="true">11.13.</strong> iptables</a></li><li class="chapter-item expanded "><a href="../../10.Linux/jq.html"><strong aria-hidden="true">11.14.</strong> jq</a></li><li class="chapter-item expanded "><a href="../../10.Linux/lsof.html"><strong aria-hidden="true">11.15.</strong> lsof</a></li><li class="chapter-item expanded "><a href="../../10.Linux/ps.html"><strong aria-hidden="true">11.16.</strong> ps</a></li><li class="chapter-item expanded "><a href="../../10.Linux/read.html"><strong aria-hidden="true">11.17.</strong> read</a></li><li class="chapter-item expanded "><a href="../../10.Linux/scp.html"><strong aria-hidden="true">11.18.</strong> scp</a></li><li class="chapter-item expanded "><a href="../../10.Linux/select.html"><strong aria-hidden="true">11.19.</strong> select</a></li><li class="chapter-item expanded "><a href="../../10.Linux/service脚本.html"><strong aria-hidden="true">11.20.</strong> service脚本</a></li><li class="chapter-item expanded "><a href="../../10.Linux/set.html"><strong aria-hidden="true">11.21.</strong> set</a></li><li class="chapter-item expanded "><a href="../../10.Linux/shell字符串.html"><strong aria-hidden="true">11.22.</strong> shell字符串</a></li><li class="chapter-item expanded "><a href="../../10.Linux/shell脚本参数.html"><strong aria-hidden="true">11.23.</strong> shell脚本参数</a></li><li class="chapter-item expanded "><a href="../../10.Linux/stat.html"><strong aria-hidden="true">11.24.</strong> stat</a></li><li class="chapter-item expanded "><a href="../../10.Linux/tar.html"><strong aria-hidden="true">11.25.</strong> tar</a></li><li class="chapter-item expanded "><a href="../../10.Linux/top命令.html"><strong aria-hidden="true">11.26.</strong> top命令</a></li><li class="chapter-item expanded "><a href="../../10.Linux/uidGidSetUidSetGid.html"><strong aria-hidden="true">11.27.</strong> uidGidSetUidSetGid</a></li><li class="chapter-item expanded "><a href="../../10.Linux/wsl关闭提示音.html"><strong aria-hidden="true">11.28.</strong> wsl关闭提示音</a></li><li class="chapter-item expanded "><a href="../../10.Linux/yum本地包依赖.html"><strong aria-hidden="true">11.29.</strong> yum本地包依赖</a></li><li class="chapter-item expanded "><a href="../../10.Linux/大端与小端.html"><strong aria-hidden="true">11.30.</strong> 大端与小端</a></li><li class="chapter-item expanded "><a href="../../10.Linux/确定Linux发行版本.html"><strong aria-hidden="true">11.31.</strong> 确定Linux发行版本</a></li><li class="chapter-item expanded "><a href="../../10.Linux/零拷贝.html"><strong aria-hidden="true">11.32.</strong> 零拷贝</a></li><li class="chapter-item expanded "><a href="../../10.Linux/默认值语法糖.html"><strong aria-hidden="true">11.33.</strong> 默认值语法糖</a></li></ol></li><li class="chapter-item expanded "><a href="../../11.algorithm/index.html"><strong aria-hidden="true">12.</strong> algorithm</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../11.algorithm/Base64编码.html"><strong aria-hidden="true">12.1.</strong> Base64编码</a></li><li class="chapter-item expanded "><a href="../../11.algorithm/Huffman编码.html"><strong aria-hidden="true">12.2.</strong> Huffman编码</a></li><li class="chapter-item expanded "><a href="../../11.algorithm/base64.html"><strong aria-hidden="true">12.3.</strong> base64</a></li><li class="chapter-item expanded "><a href="../../11.algorithm/fnv-hash算法.html"><strong aria-hidden="true">12.4.</strong> fnv-hash算法</a></li><li class="chapter-item expanded "><a href="../../11.algorithm/二叉搜索平衡树.html"><strong aria-hidden="true">12.5.</strong> 二叉搜索平衡树</a></li><li class="chapter-item expanded "><a href="../../11.algorithm/位运算.html"><strong aria-hidden="true">12.6.</strong> 位运算</a></li><li class="chapter-item expanded "><a href="../../11.algorithm/动态规划.html"><strong aria-hidden="true">12.7.</strong> 动态规划</a></li><li class="chapter-item expanded "><a href="../../11.algorithm/动态规划-新.html"><strong aria-hidden="true">12.8.</strong> 动态规划-新</a></li><li class="chapter-item expanded "><a href="../../11.algorithm/字符编码.html"><strong aria-hidden="true">12.9.</strong> 字符编码</a></li><li class="chapter-item expanded "><a href="../../11.algorithm/布隆过滤器.html"><strong aria-hidden="true">12.10.</strong> 布隆过滤器</a></li><li class="chapter-item expanded "><a href="../../11.algorithm/浮点数.html"><strong aria-hidden="true">12.11.</strong> 浮点数</a></li><li class="chapter-item expanded "><a href="../../11.algorithm/红黑树.html"><strong aria-hidden="true">12.12.</strong> 红黑树</a></li><li class="chapter-item expanded "><a href="../../11.algorithm/贪心算法.html"><strong aria-hidden="true">12.13.</strong> 贪心算法</a></li><li class="chapter-item expanded "><a href="../../11.algorithm/逆波兰表达式.html"><strong aria-hidden="true">12.14.</strong> 逆波兰表达式</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h2 id="name"><a class="header" href="#name">NAME</a></h2>
+<p><code>mustache</code> - Logic-less templates.</p>
+<h2 id="synopsis"><a class="header" href="#synopsis">SYNOPSIS</a></h2>
+<p>A typical Mustache template:</p>
+<pre><code>Hello {{name}}
+You have just won {{value}} dollars!
+{{#in_ca}}
+Well, {{taxed_value}} dollars, after taxes.
+{{/in_ca}}
+</code></pre>
+<p>Given the following hash:</p>
+<pre><code class="language-json">{
+  &quot;name&quot;: &quot;Chris&quot;,
+  &quot;value&quot;: 10000,
+  &quot;taxed_value&quot;: 10000 - (10000 * 0.4),
+  &quot;in_ca&quot;: true
+}
+</code></pre>
+<p>Will produce the following:</p>
+<pre><code>Hello Chris
+You have just won 10000 dollars!
+Well, 6000.0 dollars, after taxes.
+</code></pre>
+<h2 id="description"><a class="header" href="#description">DESCRIPTION</a></h2>
+<p>Mustache can be used for HTML, config files, source code - anything. It works by expanding tags in a template using values provided in a hash or object.</p>
+<p>We call it &quot;logic-less&quot; because there are no if statements, else clauses, or for loops. Instead there are only tags. Some tags are replaced with a value, some nothing, and others a series of values. This document explains the different types of Mustache tags.</p>
+<p><em>Mustache</em>可以用于HTML，配置文件，源代码。它通过使用哈希或对象中提供的值扩展模板中的标记来工作。
+我们称其为 “无逻辑”，因为没有if语句，else子句或for循环。相反，只有标签。有些标签被替换为一个值，有些什么都没有，而另一些则是一系列值。本文档解释了不同类型的<em>Mustache</em>标签。</p>
+<h2 id="tag-types"><a class="header" href="#tag-types">TAG TYPES</a></h2>
+<p>标签由 <em>double-mustaches</em> 表示。{{person}} 是一个标签，和 {{# person}} 一样。在这两个示例中，我们都将person称为键或标签键。让我们谈谈不同类型的标签。</p>
+<h3 id="variables"><a class="header" href="#variables">Variables</a></h3>
+<p>最基本的标签类型是变量。一个基本模板中的<code> {{name}}</code> 标签会尝试在当前上下文中找到name键。如果没有名称键，则将递归检查父上下文。如果到达顶部上下文并且仍然找不到名称键，则不会呈现任何内容。</p>
+<p>默认情况下，所有变量都是HTML转义的。如果要返回未转义的HTML，请使用三重胡子 :<code>{{{ name }}}</code>。</p>
+<p>可以使用 &amp;  反转义 一个变量 <code>{{&amp; name}}</code>。这在更改分隔符时可能很有用 (请参阅下面的 “设置分隔符”)。</p>
+<p>默认情况下，变量 <em>miss</em> 返回一个空字符串。这通常可以在你的小胡子库中配置。例如，Ruby版本的Mustache支持在这种情况下引发异常。</p>
+<p>Template:</p>
+<pre><code>* {{name}}
+* {{age}}
+* {{company}}
+* {{{company}}}
+</code></pre>
+<p>Hash:</p>
+<pre><code>{
+  &quot;name&quot;: &quot;Chris&quot;,
+  &quot;company&quot;: &quot;&lt;b&gt;GitHub&lt;/b&gt;&quot;
+}
+</code></pre>
+<p>Output:</p>
+<pre><code>* Chris
+*
+* &amp;lt;b&amp;gt;GitHub&amp;lt;/b&amp;gt;
+* &lt;b&gt;GitHub&lt;/b&gt;
+</code></pre>
+<h3 id="sections"><a class="header" href="#sections">Sections</a></h3>
+<p>Sections render blocks of text one or more times, depending on the value of the key in the current context.</p>
+<p>A section begins with a pound and ends with a slash. That is, <code>{{#person}}</code> begins a &quot;person&quot; section while <code>{{/person}}</code> ends it.</p>
+<p>The behavior of the section is determined by the value of the key.</p>
+<p><strong>False Values or Empty Lists</strong></p>
+<p>If the <code>person</code> key exists and has a value of false or an empty list, the HTML between the pound and slash will not be displayed.</p>
+<p>Template:</p>
+<pre><code>Shown.
+{{#person}}
+  Never shown!
+{{/person}}
+</code></pre>
+<p>Hash:</p>
+<pre><code>{
+  &quot;person&quot;: false
+}
+</code></pre>
+<p>Output:</p>
+<pre><code>Shown.
+</code></pre>
+<p><strong>Non-Empty Lists</strong></p>
+<p>If the <code>person</code> key exists and has a non-false value, the HTML between the pound and slash will be rendered and displayed one or more times.</p>
+<p>When the value is a non-empty list, the text in the block will be displayed once for each item in the list. The context of the block will be set to the current item for each iteration. In this way we can loop over collections.</p>
+<p>Template:</p>
+<pre><code>{{#repo}}
+  &lt;b&gt;{{name}}&lt;/b&gt;
+{{/repo}}
+</code></pre>
+<p>Hash:</p>
+<pre><code>{
+  &quot;repo&quot;: [
+    { &quot;name&quot;: &quot;resque&quot; },
+    { &quot;name&quot;: &quot;hub&quot; },
+    { &quot;name&quot;: &quot;rip&quot; }
+  ]
+}
+</code></pre>
+<p>Output:</p>
+<pre><code>&lt;b&gt;resque&lt;/b&gt;
+&lt;b&gt;hub&lt;/b&gt;
+&lt;b&gt;rip&lt;/b&gt;
+</code></pre>
+<p><strong>Lambdas</strong></p>
+<p>When the value is a callable object, such as a function or lambda, the object will be invoked and passed the block of text. The text passed is the literal block, unrendered. <code>{{tags}}</code> will not have been expanded - the lambda should do that on its own. In this way you can implement filters or caching.</p>
+<p>Template:</p>
+<pre><code>{{#wrapped}}
+  {{name}} is awesome.
+{{/wrapped}}
+</code></pre>
+<p>Hash:</p>
+<pre><code>{
+  &quot;name&quot;: &quot;Willy&quot;,
+  &quot;wrapped&quot;: function() {
+    return function(text, render) {
+      return &quot;&lt;b&gt;&quot; + render(text) + &quot;&lt;/b&gt;&quot;
+    }
+  }
+}
+</code></pre>
+<p>Output:</p>
+<pre><code>&lt;b&gt;Willy is awesome.&lt;/b&gt;
+</code></pre>
+<p><strong>Non-False Values</strong></p>
+<p>When the value is non-false but not a list, it will be used as the context for a single rendering of the block.</p>
+<p>Template:</p>
+<pre><code>{{#person?}}
+  Hi {{name}}!
+{{/person?}}
+</code></pre>
+<p>Hash:</p>
+<pre><code>{
+  &quot;person?&quot;: { &quot;name&quot;: &quot;Jon&quot; }
+}
+</code></pre>
+<p>Output:</p>
+<pre><code>Hi Jon!
+</code></pre>
+<h3 id="inverted-sections"><a class="header" href="#inverted-sections">Inverted Sections</a></h3>
+<p>An inverted section begins with a caret (hat) and ends with a slash. That is <code>{{^person}}</code> begins a &quot;person&quot; inverted section while <code>{{/person}}</code> ends it.</p>
+<p>While sections can be used to render text one or more times based on the value of the key, inverted sections may render text once based on the inverse value of the key. That is, they will be rendered if the key doesn't exist, is false, or is an empty list.</p>
+<p>Template:</p>
+<pre><code>{{#repo}}
+  &lt;b&gt;{{name}}&lt;/b&gt;
+{{/repo}}
+{{^repo}}
+  No repos :(
+{{/repo}}
+</code></pre>
+<p>Hash:</p>
+<pre><code>{
+  &quot;repo&quot;: []
+}
+</code></pre>
+<p>Output:</p>
+<pre><code>No repos :(
+</code></pre>
+<h3 id="comments"><a class="header" href="#comments">Comments</a></h3>
+<p>Comments begin with a bang and are ignored. The following template:</p>
+<pre><code>&lt;h1&gt;Today{{! ignore me }}.&lt;/h1&gt;
+</code></pre>
+<p>Will render as follows:</p>
+<pre><code>&lt;h1&gt;Today.&lt;/h1&gt;
+</code></pre>
+<p>Comments may contain newlines.</p>
+<h3 id="partials"><a class="header" href="#partials">Partials</a></h3>
+<p>Partials begin with a greater than sign, like <code>{{&gt; box}}</code>.</p>
+<p>Partials are rendered at runtime (as opposed to compile time), so recursive partials are possible. Just avoid infinite loops.</p>
+<p>They also inherit the calling context. Whereas in an <a href="http://en.wikipedia.org/wiki/ERuby">ERB</a> file you may have this:</p>
+<pre><code>&lt;%= partial :next_more, :start =&gt; start, :size =&gt; size %&gt;
+</code></pre>
+<p>Mustache requires only this:</p>
+<pre><code>{{&gt; next_more}}
+</code></pre>
+<p>Why? Because the <code>next_more.mustache</code> file will inherit the <code>size</code> and <code>start</code> methods from the calling context.</p>
+<p>In this way you may want to think of partials as includes, imports, template expansion, nested templates, or subtemplates, even though those aren't literally the case here.</p>
+<p>For example, this template and partial:</p>
+<pre><code>base.mustache:
+&lt;h2&gt;Names&lt;/h2&gt;
+{{#names}}
+  {{&gt; user}}
+{{/names}}
+
+user.mustache:
+&lt;strong&gt;{{name}}&lt;/strong&gt;
+</code></pre>
+<p>Can be thought of as a single, expanded template:</p>
+<pre><code>&lt;h2&gt;Names&lt;/h2&gt;
+{{#names}}
+  &lt;strong&gt;{{name}}&lt;/strong&gt;
+{{/names}}
+</code></pre>
+<h3 id="set-delimiter"><a class="header" href="#set-delimiter">Set Delimiter</a></h3>
+<p>Set Delimiter tags start with an equal sign and change the tag delimiters from <code>{{</code> and <code>}}</code> to custom strings.</p>
+<p>Consider the following contrived example:</p>
+<pre><code>* {{default_tags}}
+{{=&lt;% %&gt;=}}
+* &lt;% erb_style_tags %&gt;
+&lt;%={{ }}=%&gt;
+* {{ default_tags_again }}
+</code></pre>
+<p>Here we have a list with three items. The first item uses the default tag style, the second uses erb style as defined by the Set Delimiter tag, and the third returns to the default style after yet another Set Delimiter declaration.</p>
+<p>According to <a href="http://google-ctemplate.googlecode.com/svn/trunk/doc/howto.html">ctemplates</a>, this &quot;is useful for languages like TeX, where double-braces may occur in the text and are awkward to use for markup.&quot;</p>
+<p>Custom delimiters may not contain whitespace or the equals sign.</p>
+<h2 id="see-also"><a class="header" href="#see-also">SEE ALSO</a></h2>
+<p><a href="http://mustache.github.io/mustache.1.ron.html">mustache(1)</a>, http://mustache.github.io/</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../4.模板引擎/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../../5.常用软件/Multipass.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../4.模板引擎/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../../5.常用软件/Multipass.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </body>
+</html>

@@ -1,0 +1,396 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>top命令</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">我的笔记库</a></li><li class="chapter-item expanded affix "><li class="part-title">绘图与建模</li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.</strong> UML</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../0.绘图与建模_UML/UML.html"><strong aria-hidden="true">1.1.</strong> UML</a></li></ol></li><li class="chapter-item expanded "><a href="../1.绘图与建模_MERMAID/index.html"><strong aria-hidden="true">2.</strong> MERMAID</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../1.绘图与建模_MERMAID/时序图.html"><strong aria-hidden="true">2.1.</strong> 时序图</a></li><li class="chapter-item expanded "><a href="../1.绘图与建模_MERMAID/流程图.html"><strong aria-hidden="true">2.2.</strong> 流程图</a></li><li class="chapter-item expanded "><a href="../1.绘图与建模_MERMAID/类图.html"><strong aria-hidden="true">2.3.</strong> 类图</a></li><li class="chapter-item expanded "><a href="../1.绘图与建模_MERMAID/语法总览.html"><strong aria-hidden="true">2.4.</strong> 语法总览</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.</strong> Flowchart</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../2.绘图与建模_Flowchart/flowchart_fun.html"><strong aria-hidden="true">3.1.</strong> flowchart_fun</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> PlantUml</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../3.绘图与建模_PlantUml/plantUML语法.html"><strong aria-hidden="true">4.1.</strong> plantUML语法</a></li></ol></li><li class="chapter-item expanded "><li class="part-title"></li><li class="chapter-item expanded "><a href="../4.模板引擎/index.html"><strong aria-hidden="true">5.</strong> 模板引擎</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../4.模板引擎/mustache/index.html"><strong aria-hidden="true">5.1.</strong> mustache</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.</strong> 常用软件</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../5.常用软件/Multipass.html"><strong aria-hidden="true">6.1.</strong> Multipass</a></li><li class="chapter-item expanded "><a href="../5.常用软件/Wallabag.html"><strong aria-hidden="true">6.2.</strong> Wallabag</a></li><li class="chapter-item expanded "><a href="../5.常用软件/v2rayN代理.html"><strong aria-hidden="true">6.3.</strong> v2rayN代理</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">7.</strong> 生活事宜</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../6.生活事宜/个人清算汇缴.html"><strong aria-hidden="true">7.1.</strong> 个人清算汇缴</a></li></ol></li><li class="chapter-item expanded "><a href="../7.思考/index.html"><strong aria-hidden="true">8.</strong> 思考</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../7.思考/学习总结.html"><strong aria-hidden="true">8.1.</strong> 学习总结</a></li><li class="chapter-item expanded "><a href="../7.思考/杂项.html"><strong aria-hidden="true">8.2.</strong> 杂项</a></li><li class="chapter-item expanded "><a href="../7.思考/编程技巧.html"><strong aria-hidden="true">8.3.</strong> 编程技巧</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.</strong> 学习</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../8.学习/概率论与数理统计.html"><strong aria-hidden="true">9.1.</strong> 概率论与数理统计</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">10.</strong> 数据格式</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../9.数据格式/XML.html"><strong aria-hidden="true">10.1.</strong> XML</a></li><li class="chapter-item expanded "><a href="../9.数据格式/yaml.html"><strong aria-hidden="true">10.2.</strong> yaml</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">11.</strong> Linux</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../10.Linux/CFSBandwidthControl.html"><strong aria-hidden="true">11.1.</strong> CFSBandwidthControl</a></li><li class="chapter-item expanded "><a href="../10.Linux/LinuxFor.html"><strong aria-hidden="true">11.2.</strong> LinuxFor</a></li><li class="chapter-item expanded "><a href="../10.Linux/LinuxWOL设置.html"><strong aria-hidden="true">11.3.</strong> LinuxWOL设置</a></li><li class="chapter-item expanded "><a href="../10.Linux/Linux条件测试.html"><strong aria-hidden="true">11.4.</strong> Linux条件测试</a></li><li class="chapter-item expanded "><a href="../10.Linux/Seed.html"><strong aria-hidden="true">11.5.</strong> Seed</a></li><li class="chapter-item expanded "><a href="../10.Linux/VIM.html"><strong aria-hidden="true">11.6.</strong> VIM</a></li><li class="chapter-item expanded "><a href="../10.Linux/caseIn.html"><strong aria-hidden="true">11.7.</strong> caseIn</a></li><li class="chapter-item expanded "><a href="../10.Linux/cgroup.html"><strong aria-hidden="true">11.8.</strong> cgroup</a></li><li class="chapter-item expanded "><a href="../10.Linux/curl.html"><strong aria-hidden="true">11.9.</strong> curl</a></li><li class="chapter-item expanded "><a href="../10.Linux/dd.html"><strong aria-hidden="true">11.10.</strong> dd</a></li><li class="chapter-item expanded "><a href="../10.Linux/diffPatch.html"><strong aria-hidden="true">11.11.</strong> diffPatch</a></li><li class="chapter-item expanded "><a href="../10.Linux/find.html"><strong aria-hidden="true">11.12.</strong> find</a></li><li class="chapter-item expanded "><a href="../10.Linux/iptables.html"><strong aria-hidden="true">11.13.</strong> iptables</a></li><li class="chapter-item expanded "><a href="../10.Linux/jq.html"><strong aria-hidden="true">11.14.</strong> jq</a></li><li class="chapter-item expanded "><a href="../10.Linux/lsof.html"><strong aria-hidden="true">11.15.</strong> lsof</a></li><li class="chapter-item expanded "><a href="../10.Linux/ps.html"><strong aria-hidden="true">11.16.</strong> ps</a></li><li class="chapter-item expanded "><a href="../10.Linux/read.html"><strong aria-hidden="true">11.17.</strong> read</a></li><li class="chapter-item expanded "><a href="../10.Linux/scp.html"><strong aria-hidden="true">11.18.</strong> scp</a></li><li class="chapter-item expanded "><a href="../10.Linux/select.html"><strong aria-hidden="true">11.19.</strong> select</a></li><li class="chapter-item expanded "><a href="../10.Linux/service脚本.html"><strong aria-hidden="true">11.20.</strong> service脚本</a></li><li class="chapter-item expanded "><a href="../10.Linux/set.html"><strong aria-hidden="true">11.21.</strong> set</a></li><li class="chapter-item expanded "><a href="../10.Linux/shell字符串.html"><strong aria-hidden="true">11.22.</strong> shell字符串</a></li><li class="chapter-item expanded "><a href="../10.Linux/shell脚本参数.html"><strong aria-hidden="true">11.23.</strong> shell脚本参数</a></li><li class="chapter-item expanded "><a href="../10.Linux/stat.html"><strong aria-hidden="true">11.24.</strong> stat</a></li><li class="chapter-item expanded "><a href="../10.Linux/tar.html"><strong aria-hidden="true">11.25.</strong> tar</a></li><li class="chapter-item expanded "><a href="../10.Linux/top命令.html" class="active"><strong aria-hidden="true">11.26.</strong> top命令</a></li><li class="chapter-item expanded "><a href="../10.Linux/uidGidSetUidSetGid.html"><strong aria-hidden="true">11.27.</strong> uidGidSetUidSetGid</a></li><li class="chapter-item expanded "><a href="../10.Linux/wsl关闭提示音.html"><strong aria-hidden="true">11.28.</strong> wsl关闭提示音</a></li><li class="chapter-item expanded "><a href="../10.Linux/yum本地包依赖.html"><strong aria-hidden="true">11.29.</strong> yum本地包依赖</a></li><li class="chapter-item expanded "><a href="../10.Linux/大端与小端.html"><strong aria-hidden="true">11.30.</strong> 大端与小端</a></li><li class="chapter-item expanded "><a href="../10.Linux/确定Linux发行版本.html"><strong aria-hidden="true">11.31.</strong> 确定Linux发行版本</a></li><li class="chapter-item expanded "><a href="../10.Linux/零拷贝.html"><strong aria-hidden="true">11.32.</strong> 零拷贝</a></li><li class="chapter-item expanded "><a href="../10.Linux/默认值语法糖.html"><strong aria-hidden="true">11.33.</strong> 默认值语法糖</a></li></ol></li><li class="chapter-item expanded "><a href="../11.algorithm/index.html"><strong aria-hidden="true">12.</strong> algorithm</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../11.algorithm/Base64编码.html"><strong aria-hidden="true">12.1.</strong> Base64编码</a></li><li class="chapter-item expanded "><a href="../11.algorithm/Huffman编码.html"><strong aria-hidden="true">12.2.</strong> Huffman编码</a></li><li class="chapter-item expanded "><a href="../11.algorithm/base64.html"><strong aria-hidden="true">12.3.</strong> base64</a></li><li class="chapter-item expanded "><a href="../11.algorithm/fnv-hash算法.html"><strong aria-hidden="true">12.4.</strong> fnv-hash算法</a></li><li class="chapter-item expanded "><a href="../11.algorithm/二叉搜索平衡树.html"><strong aria-hidden="true">12.5.</strong> 二叉搜索平衡树</a></li><li class="chapter-item expanded "><a href="../11.algorithm/位运算.html"><strong aria-hidden="true">12.6.</strong> 位运算</a></li><li class="chapter-item expanded "><a href="../11.algorithm/动态规划.html"><strong aria-hidden="true">12.7.</strong> 动态规划</a></li><li class="chapter-item expanded "><a href="../11.algorithm/动态规划-新.html"><strong aria-hidden="true">12.8.</strong> 动态规划-新</a></li><li class="chapter-item expanded "><a href="../11.algorithm/字符编码.html"><strong aria-hidden="true">12.9.</strong> 字符编码</a></li><li class="chapter-item expanded "><a href="../11.algorithm/布隆过滤器.html"><strong aria-hidden="true">12.10.</strong> 布隆过滤器</a></li><li class="chapter-item expanded "><a href="../11.algorithm/浮点数.html"><strong aria-hidden="true">12.11.</strong> 浮点数</a></li><li class="chapter-item expanded "><a href="../11.algorithm/红黑树.html"><strong aria-hidden="true">12.12.</strong> 红黑树</a></li><li class="chapter-item expanded "><a href="../11.algorithm/贪心算法.html"><strong aria-hidden="true">12.13.</strong> 贪心算法</a></li><li class="chapter-item expanded "><a href="../11.algorithm/逆波兰表达式.html"><strong aria-hidden="true">12.14.</strong> 逆波兰表达式</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="介绍"><a class="header" href="#介绍">介绍</a></h1>
+<p>top 命令可以动态地持续监听进程地运行状态，与此同时，该命令还提供了一个交互界面，用户可以根据需要，人性化地定制自己的输出，进而更清楚地了进程的运行状态。</p>
+<h1 id="格式"><a class="header" href="#格式">格式</a></h1>
+<p><strong>基本格式</strong></p>
+<pre><code>top [选项]
+</code></pre>
+<p><strong>选项</strong></p>
+<ul>
+<li>-d 秒数：指定 top 命令每隔几秒更新。默认是 3 秒；</li>
+<li>-b：使用批处理模式输出。一般和&quot;-n&quot;选项合用，用于把 top 命令重定向到文件中；</li>
+<li>-n 次数：指定 top 命令执行的次数。</li>
+<li>-p 进程PID：仅查看指定 ID 的进程；</li>
+<li>-q 没有任何延迟的刷新</li>
+<li>-s：使 top 命令在安全模式中运行，避免在交互模式中出现错误；</li>
+<li>-u 用户名：只监听某个用户的进程；</li>
+<li>-i 不显示任何闲置进程或者僵尸进程</li>
+<li>-c 显示整个命令行</li>
+</ul>
+<p><strong>交互式命令选项</strong></p>
+<p>常用交互操作</p>
+<ul>
+<li>
+<p>基础操作</p>
+<ul>
+<li>1：显示CPU详细信息，每核显示一行</li>
+<li>d / s ：修改刷新频率，单位为秒</li>
+<li>h：可显示帮助界面</li>
+<li>n：指定进程列表显示行数，默认为满屏行数</li>
+<li>q：退出top</li>
+</ul>
+</li>
+<li>
+<p>面板隐藏显示</p>
+<ul>
+<li>l：隐藏/显示第1行负载信息；</li>
+<li>t：隐藏/显示第2~3行CPU信息；</li>
+<li>m：隐藏/显示第4~5行内存信息；</li>
+</ul>
+</li>
+<li>
+<p>进程列表排序</p>
+<ul>
+<li>M：根据驻留内存大小进行排序；</li>
+<li>P：根据CPU使用百分比大小进行排序；</li>
+<li>T：根据时间/累计时间进行排序；</li>
+</ul>
+</li>
+</ul>
+<h1 id="top-命令的执行结果"><a class="header" href="#top-命令的执行结果">top 命令的执行结果</a></h1>
+<pre><code>top - 12:26:46 up 1 day, 13:32, 2 users, load average: 0.00, 0.00, 0.00
+Tasks: 95 total, 1 running, 94 sleeping, 0 stopped, 0 zombie
+Cpu(s): 0.1%us, 0.1%sy, 0.0%ni, 99.7%id, 0.1%wa, 0.0%hi, 0.1%si, 0.0%st
+Mem: 625344k total, 571504k used, 53840k free, 65800k buffers
+Swap: 524280k total, 0k used, 524280k free, 409280k cached
+PID   USER PR NI VIRT  RES  SHR S %CPU %MEM   TIME+ COMMAND
+19002 root 20  0 2656 1068  856 R  0.3  0.2 0:01.87 top
+1     root 20  0 2872 1416 1200 S  0.0  0.2 0:02.55 init
+2     root 20  0    0    0    0 S  0.0  0.0 0:00.03 kthreadd
+3     root RT  0    0    0    0 S  0.0  0.0 0:00.00 migration/0
+4     root 20  0    0    0    0 S  0.0  0.0 0:00.15 ksoftirqd/0
+5     root RT  0    0    0    0 S  0.0  0.0 0:00.00 migration/0
+6     root RT  0    0    0    0 S  0.0  0.0 0:10.01 watchdog/0
+7     root 20  0    0    0    0 S  0.0  0.0 0:05.01 events/0
+8     root 20  0    0    0    0 S  0.0  0.0 0:00.00 cgroup
+9     root 20  0    0    0    0 S  0.0  0.0 0:00.00 khelper
+10    root 20  0    0    0    0 S  0.0  0.0 0:00.00 netns
+11    root 20  0    0    0    0 S  0.0  0.0 0:00.00 async/mgr
+12    root 20  0    0    0    0 S  0.0  0.0 0:00.00 pm
+13    root 20  0    0    0    0 S  0.0  0.0 0:01.70 sync_supers
+14    root 20  0    0    0    0 S  0.0  0.0 0:00.63 bdi-default
+15    root 20  0    0    0    0 S  0.0  0.0 0:00.00 kintegrityd/0
+16    root 20  0    0    0    0 S  0.0  0.0 0:02.52 kblockd/0
+17    root 20  0    0    0    0 S  0.0  0.0 0:00.00 kacpid
+18    root 20  0    0    0    0 S  0.0  0.0 0:00.00 kacpi_notify
+</code></pre>
+<ol>
+<li>第一部分是前五行，显示的是整个系统的资源使用状况，我们就是通过这些输出来判断服务器的资源使用状态的；</li>
+</ol>
+<p><strong>第一行</strong></p>
+<table><thead><tr><th>内 容</th><th>说 明</th></tr></thead><tbody>
+<tr><td>12:26:46</td><td>系统当前时间</td></tr>
+<tr><td>up 1 day, 13:32</td><td>系统的运行时间.本机己经运行 1 天 13 小时 32 分钟</td></tr>
+<tr><td>2 users</td><td>当前登录了两个用户</td></tr>
+<tr><td>load average: 0.00,0.00，0.00</td><td>系统在之前 1 分钟、5 分钟、15 分钟的平均负载。如果 CPU 是单核的，则这个数值超过 1 就是高负载：如果 CPU 是四核的，则这个数值超过 4 就是高负载 （这个平均负载完全是依据个人经验来进行判断的，一般认为不应该超过服务器 CPU 的核数）</td></tr>
+</tbody></table>
+<p><strong>第二行</strong></p>
+<blockquote>
+<p>系统进程统计信息</p>
+</blockquote>
+<table><thead><tr><th>内 容</th><th>说 明</th></tr></thead><tbody>
+<tr><td>Tasks: 95 total</td><td>系统中的进程总数</td></tr>
+<tr><td>1 running</td><td>正在运行的进程数</td></tr>
+<tr><td>94 sleeping</td><td>睡眠的进程数</td></tr>
+<tr><td>0 stopped</td><td>正在停止的进程数</td></tr>
+<tr><td>0 zombie</td><td>僵尸进程数。如果不是 0，则需要手工检查僵尸进程</td></tr>
+</tbody></table>
+<p><strong>第三行</strong></p>
+<blockquote>
+<p>CPU 信息</p>
+</blockquote>
+<table><thead><tr><th>内 容</th><th>说 明</th></tr></thead><tbody>
+<tr><td>Cpu(s): 0.1 %us</td><td>用户模式占用的 CPU 百分比</td></tr>
+<tr><td>0.1%sy</td><td>系统模式占用的 CPU 百分比</td></tr>
+<tr><td>0.0%ni</td><td>改变过优先级的用户进程占用的 CPU 百分比</td></tr>
+<tr><td>99.7%id</td><td>空闲 CPU 占用的 CPU 百分比</td></tr>
+<tr><td>0.1%wa</td><td>等待输入/输出的进程占用的 CPU 百分比</td></tr>
+<tr><td>0.0%hi</td><td>硬中断请求服务占用的 CPU 百分比</td></tr>
+<tr><td>0.1%si</td><td>软中断请求服务占用的 CPU 百分比</td></tr>
+<tr><td>0.0%st</td><td>st（steal time）意为虚拟时间百分比，当有虚拟机时，虚拟机被hypervisor偷去的CPU时间（如果当前处于一个hypervisor下的vm，实际上hypervisor也是要消耗一部分CPU处理时间的）</td></tr>
+</tbody></table>
+<p>第四行</p>
+<blockquote>
+<p>物理内存信息</p>
+</blockquote>
+<table><thead><tr><th>内 容</th><th>说 明</th></tr></thead><tbody>
+<tr><td>Mem: 625344k total</td><td>物理内存的总量，单位为KB</td></tr>
+<tr><td>571504k used</td><td>己经使用的物理内存数量</td></tr>
+<tr><td>53840k free</td><td>空闲的物理内存数量。我们使用的是虚拟机，共分配了 628MB内存，所以只有53MB的空闲内存</td></tr>
+<tr><td>65800k buffers</td><td>用作内核缓冲的内存量</td></tr>
+</tbody></table>
+<p>第五行</p>
+<blockquote>
+<p>交换分区（swap）信息</p>
+</blockquote>
+<table><thead><tr><th>内 容</th><th>说 明</th></tr></thead><tbody>
+<tr><td>Swap: 524280k total</td><td>交换分区（虚拟内存）的总大小</td></tr>
+<tr><td>O k used</td><td>已经使用的交换分区的大小</td></tr>
+<tr><td>524280 k free</td><td>空闲交换分区的大小</td></tr>
+<tr><td>409280k cached</td><td>作为缓存的交换分区的大小</td></tr>
+</tbody></table>
+<p>如果 1 分钟、5 分钟、15 分钟的平均负载高于 1，则证明系统压力较大。如果 CPU 的使用率过高或空闲率过低，则证明系统压力较大。如果物理内存的空闲内存过小，则也证明系统压力较大。</p>
+<p>第二部分从第六行开始，显示的是系统中<strong>进程的信息</strong>；</p>
+<p><strong>显示字段管理面板</strong></p>
+<p>在top命令中按f按可以查看显示的列信息，按对应字母来开启/关闭列，大写字母表示开启，小写字母表示关闭。带*号的是默认列。</p>
+<table><thead><tr><th>英文名</th><th>解释</th></tr></thead><tbody>
+<tr><td>PID</td><td>Process Id</td></tr>
+<tr><td>USER</td><td>Effective User Name</td></tr>
+<tr><td>PR</td><td>Priority（进程优先级，不可更改）</td></tr>
+<tr><td>NI</td><td>Nice Value（进程优先级，可更改，负值表示高优先级，正值表示低优先级）</td></tr>
+<tr><td>VIRT</td><td>Virtual Image (KiB) 。进程使用的虚拟内存总量，单位kb。VIRT=SWAP+RES</td></tr>
+<tr><td>RES</td><td>Resident Size (KiB)，进程占用的物理内存，单位kb。RES=CODE+DATA</td></tr>
+<tr><td>SHR</td><td>Shared Memory (KiB)，共享内存大小</td></tr>
+<tr><td>S</td><td>Process Status，进程状态。D=不可中断的睡眠状态,R=运行,S=睡眠,T=跟踪/停止,Z=僵尸进程</td></tr>
+<tr><td>%CPU</td><td>上次更新到现在的CPU时间占用百分比</td></tr>
+<tr><td>%MEM</td><td>进程使用的物理内存百分比</td></tr>
+<tr><td>TIME+</td><td>(CPU Time, hundredths) 进程使用的CPU时间总计，单位1/100秒</td></tr>
+<tr><td>COMMAND</td><td>(Command name/line) 命令名/命令行</td></tr>
+<tr><td>PPID</td><td>(Parent Process Pid)</td></tr>
+<tr><td>UID</td><td>Effective User Id</td></tr>
+<tr><td>RUID</td><td>Real User Id</td></tr>
+<tr><td>RUSER</td><td>Real User Name</td></tr>
+<tr><td>SUID</td><td>Saved User Id</td></tr>
+<tr><td>SUSER</td><td>Saved User Name</td></tr>
+<tr><td>GID</td><td>Group Id</td></tr>
+<tr><td>GROUP</td><td>Group Name</td></tr>
+<tr><td>PGRP</td><td>Process Group Id</td></tr>
+<tr><td>TTY</td><td>Controlling Tty，启动进程的终端名。不是从终端启动的进程则显示为 ?</td></tr>
+<tr><td>TPGID</td><td>Tty Process Grp Id</td></tr>
+<tr><td>SID</td><td>Session Id</td></tr>
+<tr><td>nTH</td><td>Number of Threads</td></tr>
+<tr><td>P</td><td>(Last used cpu (SMP)) 最后使用的CPU，仅在多CPU环境下有意义</td></tr>
+<tr><td>TIME</td><td>进程使用的CPU时间总计，单位秒</td></tr>
+<tr><td>SWAP</td><td>(Swapped size (kb)) 进程使用的虚拟内存中</td></tr>
+<tr><td>CODE</td><td>(Code size (kb)) 可执行代码占用的物理内存大小，单位kb</td></tr>
+<tr><td>DATA</td><td>可执行代码以外的部分(数据段+栈)占用的物理内存大小，单位kb</td></tr>
+<tr><td>WCHAN</td><td>(Sleeping in Function) 若该进程在睡眠，则显示睡眠中的系统函数名</td></tr>
+</tbody></table>
+<h1 id="具体交互性命令"><a class="header" href="#具体交互性命令">具体交互性命令</a></h1>
+<pre><code> Z,B       Global: 'Z' change color mappings; 'B' disable/enable bold
+            Z：修改颜色配置；B：关闭/开启粗体
+  l,t,m     Toggle Summaries: 'l' load avg; 't' task/cpu stats; 'm' mem info
+            l：隐藏/显示第1行负载信息；t：隐藏/显示第2~3行CPU信息；m：隐藏/显示第4~5行内存信息；
+  1,I       Toggle SMP view: '1' single/separate states; 'I' Irix/Solaris mode
+            1：单行/多行显示CPU信息；I：Irix/Solaris模式切换
+  f,o     . Fields/Columns: 'f' add or remove; 'o' change display order
+            f：列显示控制；o：列排序控制，按字母进行调整
+  F or O  . Select sort field  选择排序列
+  &lt;,&gt;     . Move sort field: '&lt;' next col left; '&gt;' next col right 上下移动内容
+  R,H     . Toggle: 'R' normal/reverse sort; 'H' show threads
+            R：内容排序；H：显示线程
+  c,i,S   . Toggle: 'c' cmd name/line; 'i' idle tasks; 'S' cumulative time
+            c：COMMAND列命令名称与完整命令行路径切换；i：忽略闲置和僵死进程开关；S：累计模式切换
+  x,y     . Toggle highlights: 'x' sort field; 'y' running tasks
+            x：列排序；y：运行任务
+  z,b     . Toggle: 'z' color/mono; 'b' bold/reverse (only if 'x' or 'y')
+            z：颜色模式；b：粗体开关 仅适用于x，y模式中
+  u       . Show specific user only 按用户进行过滤，当输入错误可按Ctrl + Backspace进行删除
+  n or #  . Set maximum tasks displayed 设置进程最大显示条数
+
+  k,r       Manipulate tasks: 'k' kill; 'r' renice
+            k：终止一个进程；r：重新设置一个进程的优先级别
+  d or s    Set update interval  改变两次刷新之间的延迟时间（单位为s），如果有小数，就换算成ms。输入0值则系统将不断刷新，默认值是5s；
+  W         Write configuration file 将当前设置写入~/.toprc文件中
+  q         Quit       退出
+          ( commands shown with '.' require a visible task display window )
+            注意：带.的命令需要一个可见的任务显示窗口
+</code></pre>
+<h1 id="批处理-获取进程信息"><a class="header" href="#批处理-获取进程信息">批处理 获取进程信息</a></h1>
+<pre><code> top -b -n 10 &gt; /root/top.log
+</code></pre>
+<p><strong>会产生 10次 top调用并输出</strong></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../10.Linux/tar.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../10.Linux/uidGidSetUidSetGid.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../10.Linux/tar.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../10.Linux/uidGidSetUidSetGid.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </body>
+</html>
